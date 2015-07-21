@@ -1,0 +1,18 @@
+{
+    "erpApp": {
+        "productcategory" : {
+            "home": {
+                "title": "Productcategorys",
+                "createLabel": "Create a new Productcategory",
+                "createOrEditLabel": "Create or edit a Productcategory"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Productcategory {{ id }}?"
+            },
+            "detail": {
+                "title": "Productcategory"
+            },
+            "description": "Description"
+        }
+    }
+}

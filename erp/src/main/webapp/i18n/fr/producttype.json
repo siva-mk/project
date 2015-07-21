@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "producttype" : {
+            "home": {
+                "title": "Producttypes",
+                "createLabel": "Créer un nouveau Producttype",
+                "createOrEditLabel": "Créer ou éditer un Producttype"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Producttype {{ id }} ?"
+            },
+            "detail": {
+                "title": "Producttype"
+            },
+            "description": "Description"
+        }
+    }
+}
+
