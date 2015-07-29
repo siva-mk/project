@@ -1,0 +1,36 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "userGroups",
+            "relationshipNameCapitalized": "UserGroups",
+            "relationshipFieldName": "userGroups",
+            "otherEntityName": "userGroups",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "UserGroups"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userGroupRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UserGroupRecId",
+            "fieldNameUnderscored": "user_group_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728163258",
+    "pagination": "pagination",
+    "validation": true
+}

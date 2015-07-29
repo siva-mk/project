@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "appFeatures" : {
+            "home": {
+                "title": "AppFeaturess",
+                "createLabel": "Create a new AppFeatures",
+                "createOrEditLabel": "Create or edit a AppFeatures"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete AppFeatures {{ id }}?"
+            },
+            "detail": {
+                "title": "AppFeatures"
+            },
+            "description": "Description",
+            "pageDetails": "PageDetails",
+            "active": "Active"
+        }
+    }
+}

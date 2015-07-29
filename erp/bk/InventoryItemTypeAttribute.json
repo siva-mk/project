@@ -1,0 +1,37 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "inventoryItemTypeId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "InventoryItemTypeId",
+            "fieldNameUnderscored": "inventory_item_type_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "attributeName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AttributeName",
+            "fieldNameUnderscored": "attribute_name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728165033",
+    "pagination": "pagination",
+    "validation": true
+}

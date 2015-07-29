@@ -1,0 +1,21 @@
+{
+    "erpApp": {
+        "productAttribute" : {
+            "home": {
+                "title": "ProductAttributes",
+                "createLabel": "Create a new ProductAttribute",
+                "createOrEditLabel": "Create or edit a ProductAttribute"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete ProductAttribute {{ id }}?"
+            },
+            "detail": {
+                "title": "ProductAttribute"
+            },
+            "productId": "ProductId",
+            "attributeName": "AttributeName",
+            "attributeValue": "AttributeValue",
+            "product": "product"
+        }
+    }
+}

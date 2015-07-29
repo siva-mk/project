@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "inventoryItemType" : {
+            "home": {
+                "title": "InventoryItemTypes",
+                "createLabel": "Créer un nouveau InventoryItemType",
+                "createOrEditLabel": "Créer ou éditer un InventoryItemType"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le InventoryItemType {{ id }} ?"
+            },
+            "detail": {
+                "title": "InventoryItemType"
+            },
+            "description": "Description"
+        }
+    }
+}
+

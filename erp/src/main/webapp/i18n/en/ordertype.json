@@ -1,0 +1,18 @@
+{
+    "erpApp": {
+        "ordertype" : {
+            "home": {
+                "title": "Ordertypes",
+                "createLabel": "Create a new Ordertype",
+                "createOrEditLabel": "Create or edit a Ordertype"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Ordertype {{ id }}?"
+            },
+            "detail": {
+                "title": "Ordertype"
+            },
+            "description": "Description"
+        }
+    }
+}

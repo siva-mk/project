@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "party" : {
+            "home": {
+                "title": "Partys",
+                "createLabel": "Créer un nouveau Party",
+                "createOrEditLabel": "Créer ou éditer un Party"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Party {{ id }} ?"
+            },
+            "detail": {
+                "title": "Party"
+            },
+            "partyTypeId": "PartyTypeId",
+            "partyType": "partyType"
+        }
+    }
+}
+

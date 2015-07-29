@@ -1,0 +1,37 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UserRecId",
+            "fieldNameUnderscored": "user_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "userGroupRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UserGroupRecId",
+            "fieldNameUnderscored": "user_group_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728162423",
+    "pagination": "pagination",
+    "validation": true
+}

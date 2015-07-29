@@ -1,0 +1,47 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "appFeatures",
+            "relationshipNameCapitalized": "AppFeatures",
+            "relationshipFieldName": "appFeatures",
+            "otherEntityName": "appFeatures",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "AppFeatures"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UserRecId",
+            "fieldNameUnderscored": "user_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "appFeatureRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "AppFeatureRecId",
+            "fieldNameUnderscored": "app_feature_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728163119",
+    "pagination": "pagination",
+    "validation": true
+}

@@ -1,0 +1,50 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userRecId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UserRecId",
+            "fieldNameUnderscored": "user_rec_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "address1",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Address1",
+            "fieldNameUnderscored": "address1",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "address2",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Address2",
+            "fieldNameUnderscored": "address2",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "active",
+            "fieldType": "Boolean",
+            "fieldNameCapitalized": "Active",
+            "fieldNameUnderscored": "active",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728162141",
+    "pagination": "pagination",
+    "validation": true
+}

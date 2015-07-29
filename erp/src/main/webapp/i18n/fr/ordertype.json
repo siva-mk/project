@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "ordertype" : {
+            "home": {
+                "title": "Ordertypes",
+                "createLabel": "Créer un nouveau Ordertype",
+                "createOrEditLabel": "Créer ou éditer un Ordertype"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ordertype {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ordertype"
+            },
+            "description": "Description"
+        }
+    }
+}
+

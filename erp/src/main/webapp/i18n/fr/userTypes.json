@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "userTypes" : {
+            "home": {
+                "title": "UserTypess",
+                "createLabel": "Créer un nouveau UserTypes",
+                "createOrEditLabel": "Créer ou éditer un UserTypes"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le UserTypes {{ id }} ?"
+            },
+            "detail": {
+                "title": "UserTypes"
+            },
+            "userTypeName": "UserTypeName",
+            "userTypeCode": "UserTypeCode"
+        }
+    }
+}
+

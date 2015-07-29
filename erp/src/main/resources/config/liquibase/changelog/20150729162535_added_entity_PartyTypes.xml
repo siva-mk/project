@@ -8,14 +8,14 @@
     <property name="now" value="current_timestamp" dbms="postgresql"/>
 
     <!--
-        Added the entity Productcategory.
+        Added the entity PartyTypes.
     -->
-    <changeSet id="20150721025614" author="jhipster">
-        <createTable tableName="T_PRODUCTCATEGORY">
+    <changeSet id="20150729162535" author="jhipster">
+        <createTable tableName="T_PARTYTYPES">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="description" type="varchar(255)">
+            <column name="party_type" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
         </createTable>

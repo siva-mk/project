@@ -1,0 +1,191 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "product",
+            "relationshipNameCapitalized": "Product",
+            "relationshipFieldName": "product",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Product",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "inventoryItemType",
+            "relationshipNameCapitalized": "InventoryItemType",
+            "relationshipFieldName": "inventoryItemType",
+            "otherEntityName": "inventoryItemType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InventoryItemType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "party",
+            "relationshipNameCapitalized": "Party",
+            "relationshipFieldName": "party",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "productId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ProductId",
+            "fieldNameUnderscored": "product_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "inventoryItemTypeId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "InventoryItemTypeId",
+            "fieldNameUnderscored": "inventory_item_type_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "partyId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "PartyId",
+            "fieldNameUnderscored": "party_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "statusId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "StatusId",
+            "fieldNameUnderscored": "status_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "dateTimeReceived",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateTimeReceived",
+            "fieldNameUnderscored": "date_time_received",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "expiryDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "ExpiryDate",
+            "fieldNameUnderscored": "expiry_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "facilityId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "FacilityId",
+            "fieldNameUnderscored": "facility_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "containerId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ContainerId",
+            "fieldNameUnderscored": "container_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "LotId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "LotId",
+            "fieldNameUnderscored": "lot_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "UOMId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UOMId",
+            "fieldNameUnderscored": "uomid",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "comments",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Comments",
+            "fieldNameUnderscored": "comments",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "quantityOnHand",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "QuantityOnHand",
+            "fieldNameUnderscored": "quantity_on_hand",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "availableToPromise",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "AvailableToPromise",
+            "fieldNameUnderscored": "available_to_promise",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "serialNumber",
+            "fieldType": "String",
+            "fieldNameCapitalized": "SerialNumber",
+            "fieldNameUnderscored": "serial_number",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728165513",
+    "pagination": "pagination",
+    "validation": true
+}

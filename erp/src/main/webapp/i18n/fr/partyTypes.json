@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "partyTypes" : {
+            "home": {
+                "title": "PartyTypess",
+                "createLabel": "Créer un nouveau PartyTypes",
+                "createOrEditLabel": "Créer ou éditer un PartyTypes"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le PartyTypes {{ id }} ?"
+            },
+            "detail": {
+                "title": "PartyTypes"
+            },
+            "partyType": "PartyType"
+        }
+    }
+}
+

@@ -1,0 +1,21 @@
+{
+    "erpApp": {
+        "inventoryItemStatus" : {
+            "home": {
+                "title": "InventoryItemStatuss",
+                "createLabel": "Create a new InventoryItemStatus",
+                "createOrEditLabel": "Create or edit a InventoryItemStatus"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete InventoryItemStatus {{ id }}?"
+            },
+            "detail": {
+                "title": "InventoryItemStatus"
+            },
+            "inventoryItemId": "InventoryItemId",
+            "statusId": "StatusId",
+            "statusDateTime": "StatusDateTime",
+            "inventoryItem": "inventoryItem"
+        }
+    }
+}

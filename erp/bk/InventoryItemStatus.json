@@ -1,0 +1,56 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "inventoryItem",
+            "relationshipNameCapitalized": "InventoryItem",
+            "relationshipFieldName": "inventoryItem",
+            "otherEntityName": "inventoryItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InventoryItem",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "inventoryItemId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "InventoryItemId",
+            "fieldNameUnderscored": "inventory_item_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "statusId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "StatusId",
+            "fieldNameUnderscored": "status_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "statusDateTime",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "StatusDateTime",
+            "fieldNameUnderscored": "status_date_time",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728165638",
+    "pagination": "pagination",
+    "validation": true
+}

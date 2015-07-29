@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "userGroupRights" : {
+            "home": {
+                "title": "UserGroupRightss",
+                "createLabel": "Create a new UserGroupRights",
+                "createOrEditLabel": "Create or edit a UserGroupRights"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete UserGroupRights {{ id }}?"
+            },
+            "detail": {
+                "title": "UserGroupRights"
+            },
+            "userGroupRecId": "UserGroupRecId",
+            "userGroups": "userGroups"
+        }
+    }
+}

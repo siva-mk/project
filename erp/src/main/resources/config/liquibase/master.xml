@@ -5,7 +5,12 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20150721025510_added_entity_Producttype.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20150721025614_added_entity_Productcategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729025510_added_entity_Producttype.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729025614_added_entity_Productcategory.xml" relativeToChangelogFile="false"/>    
+    <include file="classpath:config/liquibase/changelog/20150729162922_added_entity_AppFeatures.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729164937_added_entity_InventoryItemType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729161444_added_entity_Ordertype.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729162535_added_entity_PartyTypes.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150729162309_added_entity_UserGroups.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

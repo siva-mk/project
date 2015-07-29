@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "userGroupMembership" : {
+            "home": {
+                "title": "UserGroupMemberships",
+                "createLabel": "Créer un nouveau UserGroupMembership",
+                "createOrEditLabel": "Créer ou éditer un UserGroupMembership"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le UserGroupMembership {{ id }} ?"
+            },
+            "detail": {
+                "title": "UserGroupMembership"
+            },
+            "userRecId": "UserRecId",
+            "userGroupRecId": "UserGroupRecId"
+        }
+    }
+}
+

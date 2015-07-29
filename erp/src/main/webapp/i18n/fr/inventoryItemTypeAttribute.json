@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "inventoryItemTypeAttribute" : {
+            "home": {
+                "title": "InventoryItemTypeAttributes",
+                "createLabel": "Créer un nouveau InventoryItemTypeAttribute",
+                "createOrEditLabel": "Créer ou éditer un InventoryItemTypeAttribute"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le InventoryItemTypeAttribute {{ id }} ?"
+            },
+            "detail": {
+                "title": "InventoryItemTypeAttribute"
+            },
+            "inventoryItemTypeId": "InventoryItemTypeId",
+            "attributeName": "AttributeName"
+        }
+    }
+}
+

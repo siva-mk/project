@@ -1,0 +1,269 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "producttype",
+            "relationshipNameCapitalized": "Producttype",
+            "relationshipFieldName": "producttype",
+            "otherEntityName": "producttype",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Producttype",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "productCategory",
+            "relationshipNameCapitalized": "ProductCategory",
+            "relationshipFieldName": "productCategory",
+            "otherEntityName": "productCategory",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "ProductCategory",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "productTypeId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ProductTypeId",
+            "fieldNameUnderscored": "product_type_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "productCategoryId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ProductCategoryId",
+            "fieldNameUnderscored": "product_category_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "manufacturerPartyId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ManufacturerPartyId",
+            "fieldNameUnderscored": "manufacturer_party_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "introductionDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "IntroductionDate",
+            "fieldNameUnderscored": "introduction_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "salesDiscontinuationDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "SalesDiscontinuationDate",
+            "fieldNameUnderscored": "sales_discontinuation_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "supportDiscontinuationDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "SupportDiscontinuationDate",
+            "fieldNameUnderscored": "support_discontinuation_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "productName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ProductName",
+            "fieldNameUnderscored": "product_name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "internalName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "InternalName",
+            "fieldNameUnderscored": "internal_name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "brandName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "BrandName",
+            "fieldNameUnderscored": "brand_name",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "comments",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Comments",
+            "fieldNameUnderscored": "comments",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "inventoryMessage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "InventoryMessage",
+            "fieldNameUnderscored": "inventory_message",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "requireInventory",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "RequireInventory",
+            "fieldNameUnderscored": "require_inventory",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "smallImageURL",
+            "fieldType": "String",
+            "fieldNameCapitalized": "SmallImageURL",
+            "fieldNameUnderscored": "small_image_url",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "largeImageURL",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LargeImageURL",
+            "fieldNameUnderscored": "large_image_url",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 16,
+            "fieldName": "quantityUOMId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "QuantityUOMId",
+            "fieldNameUnderscored": "quantity_uomid",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 17,
+            "fieldName": "quantityIncluded",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "QuantityIncluded",
+            "fieldNameUnderscored": "quantity_included",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 18,
+            "fieldName": "piecesIncluded",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "PiecesIncluded",
+            "fieldNameUnderscored": "pieces_included",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 19,
+            "fieldName": "weightUOMId",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "WeightUOMId",
+            "fieldNameUnderscored": "weight_uomid",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 20,
+            "fieldName": "weight",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Weight",
+            "fieldNameUnderscored": "weight",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 21,
+            "fieldName": "taxable",
+            "fieldType": "Boolean",
+            "fieldNameCapitalized": "Taxable",
+            "fieldNameUnderscored": "taxable",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 22,
+            "fieldName": "createdDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "CreatedDate",
+            "fieldNameUnderscored": "created_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 23,
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CreatedBy",
+            "fieldNameUnderscored": "created_by",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 24,
+            "fieldName": "modifiedDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "ModifiedDate",
+            "fieldNameUnderscored": "modified_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 25,
+            "fieldName": "modifiedBy",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ModifiedBy",
+            "fieldNameUnderscored": "modified_by",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150728164242",
+    "pagination": "pagination",
+    "validation": true
+}

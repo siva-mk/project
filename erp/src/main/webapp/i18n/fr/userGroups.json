@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "userGroups" : {
+            "home": {
+                "title": "UserGroupss",
+                "createLabel": "Créer un nouveau UserGroups",
+                "createOrEditLabel": "Créer ou éditer un UserGroups"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le UserGroups {{ id }} ?"
+            },
+            "detail": {
+                "title": "UserGroups"
+            },
+            "userGroupName": "UserGroupName",
+            "userGroupCode": "UserGroupCode"
+        }
+    }
+}
+

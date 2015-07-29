@@ -1,0 +1,35 @@
+{
+    "erpApp": {
+        "inventoryItem" : {
+            "home": {
+                "title": "InventoryItems",
+                "createLabel": "Créer un nouveau InventoryItem",
+                "createOrEditLabel": "Créer ou éditer un InventoryItem"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le InventoryItem {{ id }} ?"
+            },
+            "detail": {
+                "title": "InventoryItem"
+            },
+            "productId": "ProductId",
+            "inventoryItemTypeId": "InventoryItemTypeId",
+            "partyId": "PartyId",
+            "statusId": "StatusId",
+            "dateTimeReceived": "DateTimeReceived",
+            "expiryDate": "ExpiryDate",
+            "facilityId": "FacilityId",
+            "containerId": "ContainerId",
+            "LotId": "LotId",
+            "UOMId": "UOMId",
+            "comments": "Comments",
+            "quantityOnHand": "QuantityOnHand",
+            "availableToPromise": "AvailableToPromise",
+            "serialNumber": "SerialNumber",
+            "product": "product",
+            "inventoryItemType": "inventoryItemType",
+            "party": "party"
+        }
+    }
+}
+

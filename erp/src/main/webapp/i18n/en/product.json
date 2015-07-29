@@ -1,0 +1,44 @@
+{
+    "erpApp": {
+        "product" : {
+            "home": {
+                "title": "Products",
+                "createLabel": "Create a new Product",
+                "createOrEditLabel": "Create or edit a Product"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Product {{ id }}?"
+            },
+            "detail": {
+                "title": "Product"
+            },
+            "productTypeId": "ProductTypeId",
+            "productCategoryId": "ProductCategoryId",
+            "manufacturerPartyId": "ManufacturerPartyId",
+            "introductionDate": "IntroductionDate",
+            "salesDiscontinuationDate": "SalesDiscontinuationDate",
+            "supportDiscontinuationDate": "SupportDiscontinuationDate",
+            "productName": "ProductName",
+            "internalName": "InternalName",
+            "brandName": "BrandName",
+            "comments": "Comments",
+            "description": "Description",
+            "inventoryMessage": "InventoryMessage",
+            "requireInventory": "RequireInventory",
+            "smallImageURL": "SmallImageURL",
+            "largeImageURL": "LargeImageURL",
+            "quantityUOMId": "QuantityUOMId",
+            "quantityIncluded": "QuantityIncluded",
+            "piecesIncluded": "PiecesIncluded",
+            "weightUOMId": "WeightUOMId",
+            "weight": "Weight",
+            "taxable": "Taxable",
+            "createdDate": "CreatedDate",
+            "createdBy": "CreatedBy",
+            "modifiedDate": "ModifiedDate",
+            "modifiedBy": "ModifiedBy",
+            "producttype": "producttype",
+            "productCategory": "productCategory"
+        }
+    }
+}

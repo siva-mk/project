@@ -1,0 +1,22 @@
+{
+    "erpApp": {
+        "contactDetails" : {
+            "home": {
+                "title": "ContactDetailss",
+                "createLabel": "Créer un nouveau ContactDetails",
+                "createOrEditLabel": "Créer ou éditer un ContactDetails"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ContactDetails {{ id }} ?"
+            },
+            "detail": {
+                "title": "ContactDetails"
+            },
+            "userRecId": "UserRecId",
+            "address1": "Address1",
+            "address2": "Address2",
+            "active": "Active"
+        }
+    }
+}
+

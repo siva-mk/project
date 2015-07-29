@@ -1,0 +1,20 @@
+{
+    "erpApp": {
+        "userRights" : {
+            "home": {
+                "title": "UserRightss",
+                "createLabel": "Create a new UserRights",
+                "createOrEditLabel": "Create or edit a UserRights"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete UserRights {{ id }}?"
+            },
+            "detail": {
+                "title": "UserRights"
+            },
+            "userRecId": "UserRecId",
+            "appFeatureRecId": "AppFeatureRecId",
+            "appFeatures": "appFeatures"
+        }
+    }
+}
