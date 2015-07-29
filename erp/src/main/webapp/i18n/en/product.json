@@ -12,8 +12,6 @@
             "detail": {
                 "title": "Product"
             },
-            "productTypeId": "ProductTypeId",
-            "productCategoryId": "ProductCategoryId",
             "manufacturerPartyId": "ManufacturerPartyId",
             "introductionDate": "IntroductionDate",
             "salesDiscontinuationDate": "SalesDiscontinuationDate",
@@ -24,21 +22,21 @@
             "comments": "Comments",
             "description": "Description",
             "inventoryMessage": "InventoryMessage",
-            "requireInventory": "RequireInventory",
+            "requiredInventory": "RequiredInventory",
             "smallImageURL": "SmallImageURL",
-            "largeImageURL": "LargeImageURL",
+            "largeImaleURL": "LargeImaleURL",
             "quantityUOMId": "QuantityUOMId",
             "quantityIncluded": "QuantityIncluded",
             "piecesIncluded": "PiecesIncluded",
             "weightUOMId": "WeightUOMId",
             "weight": "Weight",
             "taxable": "Taxable",
-            "createdDate": "CreatedDate",
+            "createdOn": "CreatedOn",
             "createdBy": "CreatedBy",
-            "modifiedDate": "ModifiedDate",
+            "modifiedOn": "ModifiedOn",
             "modifiedBy": "ModifiedBy",
             "producttype": "producttype",
-            "productCategory": "productCategory"
+            "productcategory": "productcategory"
         }
     }
 }

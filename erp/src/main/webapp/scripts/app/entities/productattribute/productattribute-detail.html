@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="erpApp.productattribute.detail.title">Productattribute</span> {{productattribute.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.productattribute.attributeName">AttributeName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{productattribute.attributeName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.productattribute.attributeValue">AttributeValue</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{productattribute.attributeValue}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.productattribute.product">product</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{productattribute.product.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="productattribute"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

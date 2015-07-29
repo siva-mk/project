@@ -12,12 +12,12 @@
         },
         {
             "relationshipId": 2,
-            "relationshipName": "productCategory",
-            "relationshipNameCapitalized": "ProductCategory",
-            "relationshipFieldName": "productCategory",
-            "otherEntityName": "productCategory",
+            "relationshipName": "productcategory",
+            "relationshipNameCapitalized": "Productcategory",
+            "relationshipFieldName": "productcategory",
+            "otherEntityName": "productcategory",
             "relationshipType": "many-to-one",
-            "otherEntityNameCapitalized": "ProductCategory",
+            "otherEntityNameCapitalized": "Productcategory",
             "otherEntityField": "id"
         }
     ],

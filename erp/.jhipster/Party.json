@@ -1,0 +1,25 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "partyTypes",
+            "relationshipNameCapitalized": "PartyTypes",
+            "relationshipFieldName": "partyTypes",
+            "otherEntityName": "partyTypes",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "PartyTypes",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150729183745",
+    "pagination": "pagination",
+    "validation": false
+}

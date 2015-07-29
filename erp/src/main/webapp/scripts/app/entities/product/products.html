@@ -1,0 +1,357 @@
+<div>
+
+    <h2 translate="erpApp.product.home.title">Product</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveProductModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.product.home.createLabel">Create a new Product</span>
+    </button>
+    <div class="modal fade" id="saveProductModal" tabindex="-1" role="dialog" aria-labelledby="myProductLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myProductLabel" translate="erpApp.product.home.createOrEditLabel">Create or edit a Product</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="product.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.product.manufacturerPartyId">ManufacturerPartyId</label>
+                            <input type="number" class="form-control" name="manufacturerPartyId"
+                                   ng-model="product.manufacturerPartyId">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.introductionDate">IntroductionDate</label>
+                            <input type="datetime-local" class="form-control" name="introductionDate"
+                                   ng-model="product.introductionDate" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.introductionDate.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.introductionDate.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.introductionDate.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.salesDiscontinuationDate">SalesDiscontinuationDate</label>
+                            <input type="datetime-local" class="form-control" name="salesDiscontinuationDate"
+                                   ng-model="product.salesDiscontinuationDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.supportDiscontinuationDate">SupportDiscontinuationDate</label>
+                            <input type="datetime-local" class="form-control" name="supportDiscontinuationDate"
+                                   ng-model="product.supportDiscontinuationDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.productName">ProductName</label>
+                            <input type="text" class="form-control" name="productName"
+                                   ng-model="product.productName" required>
+
+                            <div ng-show="editForm.productName.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.productName.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.internalName">InternalName</label>
+                            <input type="text" class="form-control" name="internalName"
+                                   ng-model="product.internalName" required>
+
+                            <div ng-show="editForm.internalName.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.internalName.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.brandName">BrandName</label>
+                            <input type="text" class="form-control" name="brandName"
+                                   ng-model="product.brandName">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.comments">Comments</label>
+                            <input type="text" class="form-control" name="comments"
+                                   ng-model="product.comments">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.description">Description</label>
+                            <input type="text" class="form-control" name="description"
+                                   ng-model="product.description">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.inventoryMessage">InventoryMessage</label>
+                            <input type="text" class="form-control" name="inventoryMessage"
+                                   ng-model="product.inventoryMessage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.requiredInventory">RequiredInventory</label>
+                            <input type="number" class="form-control" name="requiredInventory"
+                                   ng-model="product.requiredInventory" required>
+
+                            <div ng-show="editForm.requiredInventory.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.requiredInventory.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.requiredInventory.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.smallImageURL">SmallImageURL</label>
+                            <input type="text" class="form-control" name="smallImageURL"
+                                   ng-model="product.smallImageURL">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.largeImaleURL">LargeImaleURL</label>
+                            <input type="text" class="form-control" name="largeImaleURL"
+                                   ng-model="product.largeImaleURL">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.quantityUOMId">QuantityUOMId</label>
+                            <input type="number" class="form-control" name="quantityUOMId"
+                                   ng-model="product.quantityUOMId">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.quantityIncluded">QuantityIncluded</label>
+                            <input type="number" class="form-control" name="quantityIncluded"
+                                   ng-model="product.quantityIncluded">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.piecesIncluded">PiecesIncluded</label>
+                            <input type="number" class="form-control" name="piecesIncluded"
+                                   ng-model="product.piecesIncluded">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.weightUOMId">WeightUOMId</label>
+                            <input type="number" class="form-control" name="weightUOMId"
+                                   ng-model="product.weightUOMId">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.weight">Weight</label>
+                            <input type="number" class="form-control" name="weight"
+                                   ng-model="product.weight">
+
+                            <div ng-show="editForm.weight.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.weight.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.taxable">Taxable</label>
+                            <input type="checkbox" class="form-control" name="taxable"
+                                   ng-model="product.taxable">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.createdOn">CreatedOn</label>
+                            <input type="datetime-local" class="form-control" name="createdOn"
+                                   ng-model="product.createdOn" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.createdOn.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.createdOn.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.createdOn.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.createdBy">CreatedBy</label>
+                            <input type="text" class="form-control" name="createdBy"
+                                   ng-model="product.createdBy">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.modifiedOn">ModifiedOn</label>
+                            <input type="datetime-local" class="form-control" name="modifiedOn"
+                                   ng-model="product.modifiedOn" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.modifiedBy">ModifiedBy</label>
+                            <input type="text" class="form-control" name="modifiedBy"
+                                   ng-model="product.modifiedBy">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.product.producttype">producttype</label>
+                            <select class="form-control" name="producttype" ng-model="product.producttype.id" ng-options="producttype.id as producttype.id for producttype in producttypes">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.product.productcategory">productcategory</label>
+                            <select class="form-control" name="productcategory" ng-model="product.productcategory.id" ng-options="productcategory.id as productcategory.id for productcategory in productcategorys">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteProductConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(product.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.product.delete.question" translate-values="{id: '{{product.id}}'}">Are you sure you want to delete this Product?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.product.manufacturerPartyId">ManufacturerPartyId</th>
+                    <th translate="erpApp.product.introductionDate">IntroductionDate</th>
+                    <th translate="erpApp.product.salesDiscontinuationDate">SalesDiscontinuationDate</th>
+                    <th translate="erpApp.product.supportDiscontinuationDate">SupportDiscontinuationDate</th>
+                    <th translate="erpApp.product.productName">ProductName</th>
+                    <th translate="erpApp.product.internalName">InternalName</th>
+                    <th translate="erpApp.product.brandName">BrandName</th>
+                    <th translate="erpApp.product.comments">Comments</th>
+                    <th translate="erpApp.product.description">Description</th>
+                    <th translate="erpApp.product.inventoryMessage">InventoryMessage</th>
+                    <th translate="erpApp.product.requiredInventory">RequiredInventory</th>
+                    <th translate="erpApp.product.smallImageURL">SmallImageURL</th>
+                    <th translate="erpApp.product.largeImaleURL">LargeImaleURL</th>
+                    <th translate="erpApp.product.quantityUOMId">QuantityUOMId</th>
+                    <th translate="erpApp.product.quantityIncluded">QuantityIncluded</th>
+                    <th translate="erpApp.product.piecesIncluded">PiecesIncluded</th>
+                    <th translate="erpApp.product.weightUOMId">WeightUOMId</th>
+                    <th translate="erpApp.product.weight">Weight</th>
+                    <th translate="erpApp.product.taxable">Taxable</th>
+                    <th translate="erpApp.product.createdOn">CreatedOn</th>
+                    <th translate="erpApp.product.createdBy">CreatedBy</th>
+                    <th translate="erpApp.product.modifiedOn">ModifiedOn</th>
+                    <th translate="erpApp.product.modifiedBy">ModifiedBy</th>
+                    <th translate="erpApp.product.producttype">producttype</th>
+                    <th translate="erpApp.product.productcategory">productcategory</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td><a ui-sref="productDetail({id:product.id})">{{product.id}}</a></td>
+                    <td>{{product.manufacturerPartyId}}</td>
+                    <td>{{product.introductionDate}}</td>
+                    <td>{{product.salesDiscontinuationDate}}</td>
+                    <td>{{product.supportDiscontinuationDate}}</td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.internalName}}</td>
+                    <td>{{product.brandName}}</td>
+                    <td>{{product.comments}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.inventoryMessage}}</td>
+                    <td>{{product.requiredInventory}}</td>
+                    <td>{{product.smallImageURL}}</td>
+                    <td>{{product.largeImaleURL}}</td>
+                    <td>{{product.quantityUOMId}}</td>
+                    <td>{{product.quantityIncluded}}</td>
+                    <td>{{product.piecesIncluded}}</td>
+                    <td>{{product.weightUOMId}}</td>
+                    <td>{{product.weight}}</td>
+                    <td>{{product.taxable}}</td>
+                    <td>{{product.createdOn}}</td>
+                    <td>{{product.createdBy}}</td>
+                    <td>{{product.modifiedOn}}</td>
+                    <td>{{product.modifiedBy}}</td>
+                    <td>{{product.producttype.id}}</td>
+                    <td>{{product.productcategory.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="productDetail({id:product.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(product.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(product.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

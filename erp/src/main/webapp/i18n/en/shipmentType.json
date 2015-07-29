@@ -1,0 +1,18 @@
+{
+    "erpApp": {
+        "shipmentType" : {
+            "home": {
+                "title": "ShipmentTypes",
+                "createLabel": "Create a new ShipmentType",
+                "createOrEditLabel": "Create or edit a ShipmentType"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete ShipmentType {{ id }}?"
+            },
+            "detail": {
+                "title": "ShipmentType"
+            },
+            "shipmenType": "ShipmenType"
+        }
+    }
+}

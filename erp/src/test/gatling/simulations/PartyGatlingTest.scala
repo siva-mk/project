@@ -67,7 +67,7 @@ class PartyGatlingTest extends Simulation {
             .exec(http("Create new party")
             .put("/api/partys")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "partyTypeId":"0"}""")).asJSON
+            .body(StringBody("""{"id":null}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_party_url")))
             .pause(10)

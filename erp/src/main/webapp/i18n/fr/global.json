@@ -24,6 +24,9 @@
                 "inventoryItemTypeAttribute": "InventoryItemTypeAttribute",
                 "inventoryItem": "InventoryItem",
                 "inventoryItemStatus": "InventoryItemStatus",
+                "productattribute": "Productattribute",
+                "shipmentType": "ShipmentType",
+                "shipment": "Shipment",
                 "additionalEntity": "JHipster will add addtional entities"
             },
             "account": {

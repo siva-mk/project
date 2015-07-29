@@ -1,0 +1,226 @@
+<div>
+
+    <h2 translate="erpApp.shipment.home.title">Shipment</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveShipmentModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.shipment.home.createLabel">Create a new Shipment</span>
+    </button>
+    <div class="modal fade" id="saveShipmentModal" tabindex="-1" role="dialog" aria-labelledby="myShipmentLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myShipmentLabel" translate="erpApp.shipment.home.createOrEditLabel">Create or edit a Shipment</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="shipment.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.estimateShipDate">EstimateShipDate</label>
+                            <input type="datetime-local" class="form-control" name="estimateShipDate"
+                                   ng-model="shipment.estimateShipDate" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.estimateShipDate.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.estimateShipDate.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.estimateShipDate.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.estimatedReadyDate">EstimatedReadyDate</label>
+                            <input type="datetime-local" class="form-control" name="estimatedReadyDate"
+                                   ng-model="shipment.estimatedReadyDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.estimatedArrivalDate">EstimatedArrivalDate</label>
+                            <input type="datetime-local" class="form-control" name="estimatedArrivalDate"
+                                   ng-model="shipment.estimatedArrivalDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.estimatedShipCost">EstimatedShipCost</label>
+                            <input type="number" class="form-control" name="estimatedShipCost"
+                                   ng-model="shipment.estimatedShipCost" required>
+
+                            <div ng-show="editForm.estimatedShipCost.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.estimatedShipCost.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.estimatedShipCost.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.actualShipCost">ActualShipCost</label>
+                            <input type="number" class="form-control" name="actualShipCost"
+                                   ng-model="shipment.actualShipCost">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.latestCancelDate">LatestCancelDate</label>
+                            <input type="datetime-local" class="form-control" name="latestCancelDate"
+                                   ng-model="shipment.latestCancelDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.handlingInstruction">HandlingInstruction</label>
+                            <input type="text" class="form-control" name="handlingInstruction"
+                                   ng-model="shipment.handlingInstruction">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.lastUpdated">LastUpdated</label>
+                            <input type="datetime-local" class="form-control" name="lastUpdated"
+                                   ng-model="shipment.lastUpdated" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.lastUpdated.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.lastUpdated.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.lastUpdated.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.shipmentType">shipmentType</label>
+                            <select class="form-control" name="shipmentType" ng-model="shipment.shipmentType.id" ng-options="shipmentType.id as shipmentType.id for shipmentType in shipmenttypes">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.partyTo">partyTo</label>
+                            <select class="form-control" name="partyTo" ng-model="shipment.partyTo.id" ng-options="party.id as party.id for party in partys">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipment.partyFrom">partyFrom</label>
+                            <select class="form-control" name="partyFrom" ng-model="shipment.partyFrom.id" ng-options="party.id as party.id for party in partys">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteShipmentConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(shipment.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.shipment.delete.question" translate-values="{id: '{{shipment.id}}'}">Are you sure you want to delete this Shipment?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.shipment.estimateShipDate">EstimateShipDate</th>
+                    <th translate="erpApp.shipment.estimatedReadyDate">EstimatedReadyDate</th>
+                    <th translate="erpApp.shipment.estimatedArrivalDate">EstimatedArrivalDate</th>
+                    <th translate="erpApp.shipment.estimatedShipCost">EstimatedShipCost</th>
+                    <th translate="erpApp.shipment.actualShipCost">ActualShipCost</th>
+                    <th translate="erpApp.shipment.latestCancelDate">LatestCancelDate</th>
+                    <th translate="erpApp.shipment.handlingInstruction">HandlingInstruction</th>
+                    <th translate="erpApp.shipment.lastUpdated">LastUpdated</th>
+                    <th translate="erpApp.shipment.shipmentType">shipmentType</th>
+                    <th translate="erpApp.shipment.partyTo">partyTo</th>
+                    <th translate="erpApp.shipment.partyFrom">partyFrom</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="shipment in shipments">
+                    <td><a ui-sref="shipmentDetail({id:shipment.id})">{{shipment.id}}</a></td>
+                    <td>{{shipment.estimateShipDate}}</td>
+                    <td>{{shipment.estimatedReadyDate}}</td>
+                    <td>{{shipment.estimatedArrivalDate}}</td>
+                    <td>{{shipment.estimatedShipCost}}</td>
+                    <td>{{shipment.actualShipCost}}</td>
+                    <td>{{shipment.latestCancelDate}}</td>
+                    <td>{{shipment.handlingInstruction}}</td>
+                    <td>{{shipment.lastUpdated}}</td>
+                    <td>{{shipment.shipmentType.id}}</td>
+                    <td>{{shipment.partyTo.id}}</td>
+                    <td>{{shipment.partyFrom.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="shipmentDetail({id:shipment.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(shipment.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(shipment.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

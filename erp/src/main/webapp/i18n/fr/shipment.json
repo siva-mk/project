@@ -1,0 +1,29 @@
+{
+    "erpApp": {
+        "shipment" : {
+            "home": {
+                "title": "Shipments",
+                "createLabel": "Créer un nouveau Shipment",
+                "createOrEditLabel": "Créer ou éditer un Shipment"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Shipment {{ id }} ?"
+            },
+            "detail": {
+                "title": "Shipment"
+            },
+            "estimateShipDate": "EstimateShipDate",
+            "estimatedReadyDate": "EstimatedReadyDate",
+            "estimatedArrivalDate": "EstimatedArrivalDate",
+            "estimatedShipCost": "EstimatedShipCost",
+            "actualShipCost": "ActualShipCost",
+            "latestCancelDate": "LatestCancelDate",
+            "handlingInstruction": "HandlingInstruction",
+            "lastUpdated": "LastUpdated",
+            "shipmentType": "shipmentType",
+            "partyTo": "partyTo",
+            "partyFrom": "partyFrom"
+        }
+    }
+}
+

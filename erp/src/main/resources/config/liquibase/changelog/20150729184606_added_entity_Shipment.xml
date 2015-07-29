@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Shipment.
+    -->
+    <changeSet id="20150729184606" author="jhipster">
+        <createTable tableName="T_SHIPMENT">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="estimate_ship_date" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="estimated_ready_date" type="timestamp"/>
+            <column name="estimated_arrival_date" type="timestamp"/>
+            <column name="estimated_ship_cost" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="actual_ship_cost" type="bigint"/>
+            <column name="latest_cancel_date" type="timestamp"/>
+            <column name="handling_instruction" type="varchar(255)"/>
+            <column name="last_updated" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="shipmenttype_id" type="bigint"/>
+            <column name="partyto_id" type="bigint"/>
+            <column name="partyfrom_id" type="bigint"/>
+        </createTable>
+        <dropDefaultValue tableName="T_SHIPMENT" columnName="estimate_ship_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_SHIPMENT" columnName="estimated_ready_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_SHIPMENT" columnName="estimated_arrival_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_SHIPMENT" columnName="latest_cancel_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_SHIPMENT" columnName="last_updated" columnDataType="datetime"/>
+
+        
+        <addForeignKeyConstraint baseColumnNames="shipmenttype_id"
+                                 baseTableName="T_SHIPMENT"
+                                 constraintName="fk_shipment_shipmenttype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_SHIPMENTTYPE"/>
+
+        <addForeignKeyConstraint baseColumnNames="partyto_id"
+                                 baseTableName="T_SHIPMENT"
+                                 constraintName="fk_shipment_partyto_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PARTY"/>
+
+        <addForeignKeyConstraint baseColumnNames="partyfrom_id"
+                                 baseTableName="T_SHIPMENT"
+                                 constraintName="fk_shipment_partyfrom_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PARTY"/>
+
+    </changeSet>
+</databaseChangeLog>

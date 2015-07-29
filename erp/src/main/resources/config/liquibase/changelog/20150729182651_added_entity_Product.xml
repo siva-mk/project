@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Product.
+    -->
+    <changeSet id="20150729182651" author="jhipster">
+        <createTable tableName="T_PRODUCT">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="manufacturer_party_id" type="integer"/>
+            <column name="introduction_date" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="sales_discontinuation_date" type="timestamp"/>
+            <column name="support_discontinuation_date" type="timestamp"/>
+            <column name="product_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="internal_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="brand_name" type="varchar(255)"/>
+            <column name="comments" type="varchar(255)"/>
+            <column name="description" type="varchar(255)"/>
+            <column name="inventory_message" type="varchar(255)"/>
+            <column name="required_inventory" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="small_image_url" type="varchar(255)"/>
+            <column name="large_imale_url" type="varchar(255)"/>
+            <column name="quantity_uomid" type="integer"/>
+            <column name="quantity_included" type="integer"/>
+            <column name="pieces_included" type="integer"/>
+            <column name="weight_uomid" type="integer"/>
+            <column name="weight" type="integer"/>
+            <column name="taxable" type="bit"/>
+            <column name="created_on" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_by" type="varchar(255)"/>
+            <column name="modified_on" type="timestamp"/>
+            <column name="modified_by" type="varchar(255)"/>
+            <column name="producttype_id" type="bigint"/>
+            <column name="productcategory_id" type="bigint"/>
+        </createTable>
+        <dropDefaultValue tableName="T_PRODUCT" columnName="introduction_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_PRODUCT" columnName="sales_discontinuation_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_PRODUCT" columnName="support_discontinuation_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_PRODUCT" columnName="created_on" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_PRODUCT" columnName="modified_on" columnDataType="datetime"/>
+
+        
+        <addForeignKeyConstraint baseColumnNames="producttype_id"
+                                 baseTableName="T_PRODUCT"
+                                 constraintName="fk_product_producttype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PRODUCTTYPE"/>
+
+        <addForeignKeyConstraint baseColumnNames="productcategory_id"
+                                 baseTableName="T_PRODUCT"
+                                 constraintName="fk_product_productcategory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_PRODUCTCATEGORY"/>
+
+    </changeSet>
+</databaseChangeLog>

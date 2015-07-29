@@ -1,0 +1,110 @@
+
+<div>
+    <h2><span translate="erpApp.shipment.detail.title">Shipment</span> {{shipment.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.estimateShipDate">EstimateShipDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.estimateShipDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.estimatedReadyDate">EstimatedReadyDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.estimatedReadyDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.estimatedArrivalDate">EstimatedArrivalDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.estimatedArrivalDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.estimatedShipCost">EstimatedShipCost</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.estimatedShipCost}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.actualShipCost">ActualShipCost</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.actualShipCost}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.latestCancelDate">LatestCancelDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.latestCancelDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.handlingInstruction">HandlingInstruction</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.handlingInstruction}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.lastUpdated">LastUpdated</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.lastUpdated}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.shipmentType">shipmentType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.shipmentType.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.partyTo">partyTo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.partyTo.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipment.partyFrom">partyFrom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipment.partyFrom.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="shipment"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

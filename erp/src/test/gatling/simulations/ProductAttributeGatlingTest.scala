@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory
 import scala.concurrent.duration._
 
 /**
- * Performance test for the ProductAttribute entity.
+ * Performance test for the Productattribute entity.
  */
-class ProductAttributeGatlingTest extends Simulation {
+class ProductattributeGatlingTest extends Simulation {
 
     val context: LoggerContext = LoggerFactory.getILoggerFactory.asInstanceOf[LoggerContext]
     // Log all HTTP requests
@@ -37,7 +37,7 @@ class ProductAttributeGatlingTest extends Simulation {
         "X-CSRF-TOKEN" -> "${csrf_token}"
     )
 
-    val scn = scenario("Test the ProductAttribute entity")
+    val scn = scenario("Test the Productattribute entity")
         .exec(http("First unauthenticated request")
         .get("/api/account")
         .headers(headers_http)
@@ -59,26 +59,26 @@ class ProductAttributeGatlingTest extends Simulation {
         .check(headerRegex("Set-Cookie", "CSRF-TOKEN=(.*); [P,p]ath=/").saveAs("csrf_token")))
         .pause(10)
         .repeat(2) {
-            exec(http("Get all productAttributes")
-            .get("/api/productAttributes")
+            exec(http("Get all productattributes")
+            .get("/api/productattributes")
             .headers(headers_http_authenticated)
             .check(status.is(200)))
             .pause(10 seconds, 20 seconds)
-            .exec(http("Create new productAttribute")
-            .put("/api/productAttributes")
+            .exec(http("Create new productattribute")
+            .put("/api/productattributes")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "productId":"0", "attributeName":"SAMPLE_TEXT", "attributeValue":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "attributeName":"SAMPLE_TEXT", "attributeValue":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
-            .check(headerRegex("Location", "(.*)").saveAs("new_productAttribute_url")))
+            .check(headerRegex("Location", "(.*)").saveAs("new_productattribute_url")))
             .pause(10)
             .repeat(5) {
-                exec(http("Get created productAttribute")
-                .get("${new_productAttribute_url}")
+                exec(http("Get created productattribute")
+                .get("${new_productattribute_url}")
                 .headers(headers_http_authenticated))
                 .pause(10)
             }
-            .exec(http("Delete created productAttribute")
-            .delete("${new_productAttribute_url}")
+            .exec(http("Delete created productattribute")
+            .delete("${new_productattribute_url}")
             .headers(headers_http_authenticated))
             .pause(10)
         }

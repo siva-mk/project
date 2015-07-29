@@ -1,0 +1,119 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "shipmentType",
+            "relationshipNameCapitalized": "ShipmentType",
+            "relationshipFieldName": "shipmentType",
+            "otherEntityName": "shipmentType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "ShipmentType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "partyTo",
+            "relationshipNameCapitalized": "PartyTo",
+            "relationshipFieldName": "partyTo",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "partyFrom",
+            "relationshipNameCapitalized": "PartyFrom",
+            "relationshipFieldName": "partyFrom",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "estimateShipDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "EstimateShipDate",
+            "fieldNameUnderscored": "estimate_ship_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "estimatedReadyDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "EstimatedReadyDate",
+            "fieldNameUnderscored": "estimated_ready_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "estimatedArrivalDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "EstimatedArrivalDate",
+            "fieldNameUnderscored": "estimated_arrival_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "estimatedShipCost",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "EstimatedShipCost",
+            "fieldNameUnderscored": "estimated_ship_cost",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "actualShipCost",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "ActualShipCost",
+            "fieldNameUnderscored": "actual_ship_cost",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "latestCancelDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "LatestCancelDate",
+            "fieldNameUnderscored": "latest_cancel_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "handlingInstruction",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HandlingInstruction",
+            "fieldNameUnderscored": "handling_instruction",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "lastUpdated",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "LastUpdated",
+            "fieldNameUnderscored": "last_updated",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150729184606",
+    "pagination": "pagination",
+    "validation": true
+}
