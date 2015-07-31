@@ -1,0 +1,134 @@
+
+<div>
+    <h2><span translate="erpApp.inventoryItem.detail.title">InventoryItem</span> {{inventoryItem.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.dateTimeReceived">DateTimeReceived</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.dateTimeReceived}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.expiryDate">ExpiryDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.expiryDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.facility_id">Facility_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.facility_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.container_id">Container_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.container_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.lot_id">Lot_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.lot_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.UOM_id">UOM_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.UOM_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.comments">Comments</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.comments}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.quantityOnHand">QuantityOnHand</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.quantityOnHand}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.availableToPromise">AvailableToPromise</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.availableToPromise}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.serialNumber">SerialNumber</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.serialNumber}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.product">product</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.product.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.inventoryItemType">inventoryItemType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.inventoryItemType.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.party">party</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.party.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItem.status">status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItem.status.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="inventoryItem"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

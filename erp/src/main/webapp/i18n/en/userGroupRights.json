@@ -12,8 +12,7 @@
             "detail": {
                 "title": "UserGroupRights"
             },
-            "userGroupRecId": "UserGroupRecId",
-            "userGroups": "userGroups"
+            "userGroup": "userGroup"
         }
     }
 }

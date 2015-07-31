@@ -1,0 +1,32 @@
+{
+    "erpApp": {
+        "orderItem" : {
+            "home": {
+                "title": "OrderItems",
+                "createLabel": "Create a new OrderItem",
+                "createOrEditLabel": "Create or edit a OrderItem"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete OrderItem {{ id }}?"
+            },
+            "detail": {
+                "title": "OrderItem"
+            },
+            "budget_id": "Budget_id",
+            "budgetItem_id": "BudgetItem_id",
+            "productFeadute_id": "ProductFeadute_id",
+            "quote_id": "Quote_id",
+            "quoteItem_id": "QuoteItem_id",
+            "quantity": "Quantity",
+            "unitPrice": "UnitPrice",
+            "unitListPrice": "UnitListPrice",
+            "unitAverageCost": "UnitAverageCost",
+            "estimatedDeliveryDate": "EstimatedDeliveryDate",
+            "itemDescription": "ItemDescription",
+            "correspondingPo_id": "CorrespondingPo_id",
+            "order": "order",
+            "product": "product",
+            "status": "status"
+        }
+    }
+}

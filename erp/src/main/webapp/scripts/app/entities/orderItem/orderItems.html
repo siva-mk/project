@@ -1,0 +1,318 @@
+<div>
+
+    <h2 translate="erpApp.orderItem.home.title">OrderItem</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveOrderItemModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.orderItem.home.createLabel">Create a new OrderItem</span>
+    </button>
+    <div class="modal fade" id="saveOrderItemModal" tabindex="-1" role="dialog" aria-labelledby="myOrderItemLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myOrderItemLabel" translate="erpApp.orderItem.home.createOrEditLabel">Create or edit a OrderItem</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="orderItem.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.budget_id">Budget_id</label>
+                            <input type="number" class="form-control" name="budget_id"
+                                   ng-model="orderItem.budget_id" required>
+
+                            <div ng-show="editForm.budget_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.budget_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.budget_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.budgetItem_id">BudgetItem_id</label>
+                            <input type="number" class="form-control" name="budgetItem_id"
+                                   ng-model="orderItem.budgetItem_id" required>
+
+                            <div ng-show="editForm.budgetItem_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.budgetItem_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.budgetItem_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.productFeadute_id">ProductFeadute_id</label>
+                            <input type="number" class="form-control" name="productFeadute_id"
+                                   ng-model="orderItem.productFeadute_id">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.quote_id">Quote_id</label>
+                            <input type="number" class="form-control" name="quote_id"
+                                   ng-model="orderItem.quote_id" required>
+
+                            <div ng-show="editForm.quote_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.quote_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.quote_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.quoteItem_id">QuoteItem_id</label>
+                            <input type="number" class="form-control" name="quoteItem_id"
+                                   ng-model="orderItem.quoteItem_id" required>
+
+                            <div ng-show="editForm.quoteItem_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.quoteItem_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.quoteItem_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.quantity">Quantity</label>
+                            <input type="number" class="form-control" name="quantity"
+                                   ng-model="orderItem.quantity" required>
+
+                            <div ng-show="editForm.quantity.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.quantity.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.quantity.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.unitPrice">UnitPrice</label>
+                            <input type="number" class="form-control" name="unitPrice"
+                                   ng-model="orderItem.unitPrice" required>
+
+                            <div ng-show="editForm.unitPrice.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.unitPrice.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.unitPrice.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.unitListPrice">UnitListPrice</label>
+                            <input type="number" class="form-control" name="unitListPrice"
+                                   ng-model="orderItem.unitListPrice" required>
+
+                            <div ng-show="editForm.unitListPrice.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.unitListPrice.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.unitListPrice.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.unitAverageCost">UnitAverageCost</label>
+                            <input type="number" class="form-control" name="unitAverageCost"
+                                   ng-model="orderItem.unitAverageCost">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.estimatedDeliveryDate">EstimatedDeliveryDate</label>
+                            <input type="datetime-local" class="form-control" name="estimatedDeliveryDate"
+                                   ng-model="orderItem.estimatedDeliveryDate" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.estimatedDeliveryDate.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.estimatedDeliveryDate.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.estimatedDeliveryDate.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.itemDescription">ItemDescription</label>
+                            <input type="text" class="form-control" name="itemDescription"
+                                   ng-model="orderItem.itemDescription">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.correspondingPo_id">CorrespondingPo_id</label>
+                            <input type="number" class="form-control" name="correspondingPo_id"
+                                   ng-model="orderItem.correspondingPo_id" required>
+
+                            <div ng-show="editForm.correspondingPo_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.correspondingPo_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.correspondingPo_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.order">order</label>
+                            <select class="form-control" name="order" ng-model="orderItem.order.id" ng-options="orderHeader.id as orderHeader.id for orderHeader in orderheaders">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.product">product</label>
+                            <select class="form-control" name="product" ng-model="orderItem.product.id" ng-options="product.id as product.id for product in products">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderItem.status">status</label>
+                            <select class="form-control" name="status" ng-model="orderItem.status.id" ng-options="status.id as status.id for status in statuss">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteOrderItemConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(orderItem.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.orderItem.delete.question" translate-values="{id: '{{orderItem.id}}'}">Are you sure you want to delete this OrderItem?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.orderItem.budget_id">Budget_id</th>
+                    <th translate="erpApp.orderItem.budgetItem_id">BudgetItem_id</th>
+                    <th translate="erpApp.orderItem.productFeadute_id">ProductFeadute_id</th>
+                    <th translate="erpApp.orderItem.quote_id">Quote_id</th>
+                    <th translate="erpApp.orderItem.quoteItem_id">QuoteItem_id</th>
+                    <th translate="erpApp.orderItem.quantity">Quantity</th>
+                    <th translate="erpApp.orderItem.unitPrice">UnitPrice</th>
+                    <th translate="erpApp.orderItem.unitListPrice">UnitListPrice</th>
+                    <th translate="erpApp.orderItem.unitAverageCost">UnitAverageCost</th>
+                    <th translate="erpApp.orderItem.estimatedDeliveryDate">EstimatedDeliveryDate</th>
+                    <th translate="erpApp.orderItem.itemDescription">ItemDescription</th>
+                    <th translate="erpApp.orderItem.correspondingPo_id">CorrespondingPo_id</th>
+                    <th translate="erpApp.orderItem.order">order</th>
+                    <th translate="erpApp.orderItem.product">product</th>
+                    <th translate="erpApp.orderItem.status">status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="orderItem in orderItems">
+                    <td><a ui-sref="orderItemDetail({id:orderItem.id})">{{orderItem.id}}</a></td>
+                    <td>{{orderItem.budget_id}}</td>
+                    <td>{{orderItem.budgetItem_id}}</td>
+                    <td>{{orderItem.productFeadute_id}}</td>
+                    <td>{{orderItem.quote_id}}</td>
+                    <td>{{orderItem.quoteItem_id}}</td>
+                    <td>{{orderItem.quantity}}</td>
+                    <td>{{orderItem.unitPrice}}</td>
+                    <td>{{orderItem.unitListPrice}}</td>
+                    <td>{{orderItem.unitAverageCost}}</td>
+                    <td>{{orderItem.estimatedDeliveryDate}}</td>
+                    <td>{{orderItem.itemDescription}}</td>
+                    <td>{{orderItem.correspondingPo_id}}</td>
+                    <td>{{orderItem.order.id}}</td>
+                    <td>{{orderItem.product.id}}</td>
+                    <td>{{orderItem.status.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="orderItemDetail({id:orderItem.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(orderItem.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(orderItem.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

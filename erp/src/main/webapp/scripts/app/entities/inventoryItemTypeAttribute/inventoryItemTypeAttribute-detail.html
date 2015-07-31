@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="erpApp.inventoryItemTypeAttribute.detail.title">InventoryItemTypeAttribute</span> {{inventoryItemTypeAttribute.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.inventoryItemTypeAttribute.attributeName">AttributeName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{inventoryItemTypeAttribute.attributeName}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="inventoryItemTypeAttribute"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

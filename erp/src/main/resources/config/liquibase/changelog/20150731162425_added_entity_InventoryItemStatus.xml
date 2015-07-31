@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity InventoryItemStatus.
+    -->
+    <changeSet id="20150731162425" author="jhipster">
+        <createTable tableName="T_INVENTORYITEMSTATUS">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="status_date_time" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="inventoryitem_id" type="bigint"/>
+            <column name="status_id" type="bigint"/>
+        </createTable>
+        <dropDefaultValue tableName="T_INVENTORYITEMSTATUS" columnName="status_date_time" columnDataType="datetime"/>
+
+        
+        <addForeignKeyConstraint baseColumnNames="inventoryitem_id"
+                                 baseTableName="T_INVENTORYITEMSTATUS"
+                                 constraintName="fk_inventoryitemstatus_inventoryitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_INVENTORYITEM"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="T_INVENTORYITEMSTATUS"
+                                 constraintName="fk_inventoryitemstatus_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_STATUS"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "orderTypeAttribute" : {
+            "home": {
+                "title": "OrderTypeAttributes",
+                "createLabel": "Create a new OrderTypeAttribute",
+                "createOrEditLabel": "Create or edit a OrderTypeAttribute"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete OrderTypeAttribute {{ id }}?"
+            },
+            "detail": {
+                "title": "OrderTypeAttribute"
+            },
+            "attributeName": "AttributeName",
+            "ordertype": "ordertype"
+        }
+    }
+}

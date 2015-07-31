@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="erpApp.orderPaymentPreference.detail.title">OrderPaymentPreference</span> {{orderPaymentPreference.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.paymentMethod_id">PaymentMethod_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.paymentMethod_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.maxAmount">MaxAmount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.maxAmount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.authCode">AuthCode</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.authCode}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.authMessage">AuthMessage</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.authMessage}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.order">order</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.order.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderPaymentPreference.status">status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderPaymentPreference.status.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="orderPaymentPreference"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

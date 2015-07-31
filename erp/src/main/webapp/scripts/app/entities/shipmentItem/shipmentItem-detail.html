@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="erpApp.shipmentItem.detail.title">ShipmentItem</span> {{shipmentItem.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipmentItem.quantity">Quantity</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipmentItem.quantity}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipmentItem.shipmentContentDesc">ShipmentContentDesc</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipmentItem.shipmentContentDesc}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipmentItem.shipment">shipment</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipmentItem.shipment.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.shipmentItem.product">product</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{shipmentItem.product.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="shipmentItem"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity ShipmentItemBilling.
+    -->
+    <changeSet id="20150731171244" author="jhipster">
+        <createTable tableName="T_SHIPMENTITEMBILLING">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="shipment_id" type="bigint"/>
+            <column name="shipmentitem_id" type="bigint"/>
+            <column name="invoice_id" type="bigint"/>
+            <column name="invoiceitem_id" type="bigint"/>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="shipment_id"
+                                 baseTableName="T_SHIPMENTITEMBILLING"
+                                 constraintName="fk_shipmentitembilling_shipment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_SHIPMENT"/>
+
+        <addForeignKeyConstraint baseColumnNames="shipmentitem_id"
+                                 baseTableName="T_SHIPMENTITEMBILLING"
+                                 constraintName="fk_shipmentitembilling_shipmentitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_SHIPMENTITEM"/>
+
+        <addForeignKeyConstraint baseColumnNames="invoice_id"
+                                 baseTableName="T_SHIPMENTITEMBILLING"
+                                 constraintName="fk_shipmentitembilling_invoice_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_INVOICE"/>
+
+        <addForeignKeyConstraint baseColumnNames="invoiceitem_id"
+                                 baseTableName="T_SHIPMENTITEMBILLING"
+                                 constraintName="fk_shipmentitembilling_invoiceitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_INVOICEITEM"/>
+
+    </changeSet>
+</databaseChangeLog>

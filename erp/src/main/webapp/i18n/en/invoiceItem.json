@@ -1,0 +1,27 @@
+{
+    "erpApp": {
+        "invoiceItem" : {
+            "home": {
+                "title": "InvoiceItems",
+                "createLabel": "Create a new InvoiceItem",
+                "createOrEditLabel": "Create or edit a InvoiceItem"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete InvoiceItem {{ id }}?"
+            },
+            "detail": {
+                "title": "InvoiceItem"
+            },
+            "invoiceItemSeq_id": "InvoiceItemSeq_id",
+            "invoiceItemType_id": "InvoiceItemType_id",
+            "productFeature_id": "ProductFeature_id",
+            "UOM_id": "UOM_id",
+            "quantity": "Quantity",
+            "amount": "Amount",
+            "description": "Description",
+            "invoice": "invoice",
+            "inventoryItem": "inventoryItem",
+            "product": "product"
+        }
+    }
+}

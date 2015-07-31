@@ -1,0 +1,26 @@
+{
+    "erpApp": {
+        "invoice" : {
+            "home": {
+                "title": "Invoices",
+                "createLabel": "Créer un nouveau Invoice",
+                "createOrEditLabel": "Créer ou éditer un Invoice"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Invoice {{ id }} ?"
+            },
+            "detail": {
+                "title": "Invoice"
+            },
+            "billingAccount_id": "BillingAccount_id",
+            "invoiceDate": "InvoiceDate",
+            "invoiceMessage": "InvoiceMessage",
+            "description": "Description",
+            "invoiceType": "invoiceType",
+            "party": "party",
+            "status": "status",
+            "contactParty": "contactParty"
+        }
+    }
+}
+

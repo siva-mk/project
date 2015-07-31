@@ -1,0 +1,37 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ordertype",
+            "relationshipNameCapitalized": "Ordertype",
+            "relationshipFieldName": "ordertype",
+            "otherEntityName": "ordertype",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Ordertype",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "attributeName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AttributeName",
+            "fieldNameUnderscored": "attribute_name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731163304",
+    "pagination": "pagination",
+    "validation": true
+}

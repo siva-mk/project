@@ -1,0 +1,108 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "invoice",
+            "relationshipNameCapitalized": "Invoice",
+            "relationshipFieldName": "invoice",
+            "otherEntityName": "invoice",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Invoice",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "inventoryItem",
+            "relationshipNameCapitalized": "InventoryItem",
+            "relationshipFieldName": "inventoryItem",
+            "otherEntityName": "inventoryItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InventoryItem",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "product",
+            "relationshipNameCapitalized": "Product",
+            "relationshipFieldName": "product",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Product",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "invoiceItemSeq_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "InvoiceItemSeq_id",
+            "fieldNameUnderscored": "invoice_item_seq_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "invoiceItemType_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "InvoiceItemType_id",
+            "fieldNameUnderscored": "invoice_item_type_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "productFeature_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ProductFeature_id",
+            "fieldNameUnderscored": "product_feature_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "UOM_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UOM_id",
+            "fieldNameUnderscored": "uom_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Quantity",
+            "fieldNameUnderscored": "quantity",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "amount",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "Amount",
+            "fieldNameUnderscored": "amount",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731170653",
+    "pagination": "pagination",
+    "validation": true
+}

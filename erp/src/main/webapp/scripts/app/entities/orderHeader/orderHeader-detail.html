@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="erpApp.orderHeader.detail.title">OrderHeader</span> {{orderHeader.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.orderDate">OrderDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.orderDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.entryDate">EntryDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.entryDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.visit_id">Visit_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.visit_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.createdBy">CreatedBy</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.createdBy}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.syncStatus_id">SyncStatus_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.syncStatus_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.billingAccount_id">BillingAccount_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.billingAccount_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.originFacility_id">OriginFacility_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.originFacility_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.grandTotal">GrandTotal</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.grandTotal}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.ordertype">ordertype</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.ordertype.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderHeader.status">status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderHeader.status.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="orderHeader"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

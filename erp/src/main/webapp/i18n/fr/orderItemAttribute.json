@@ -1,0 +1,22 @@
+{
+    "erpApp": {
+        "orderItemAttribute" : {
+            "home": {
+                "title": "OrderItemAttributes",
+                "createLabel": "Créer un nouveau OrderItemAttribute",
+                "createOrEditLabel": "Créer ou éditer un OrderItemAttribute"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le OrderItemAttribute {{ id }} ?"
+            },
+            "detail": {
+                "title": "OrderItemAttribute"
+            },
+            "attributeName": "AttributeName",
+            "attributeValue": "AttributeValue",
+            "orderItemSeq_id": "OrderItemSeq_id",
+            "order": "order"
+        }
+    }
+}
+

@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="erpApp.orderItemBilling.detail.title">OrderItemBilling</span> {{orderItemBilling.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.quantity">Quantity</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.quantity}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.amount">Amount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.amount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.order">order</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.order.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.orderItem">orderItem</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.orderItem.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.invoice">invoice</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.invoice.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemBilling.invoiceItem">invoiceItem</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemBilling.invoiceItem.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="orderItemBilling"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

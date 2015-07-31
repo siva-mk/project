@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="erpApp.userType.detail.title">UserType</span> {{userType.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.userType.userTypeName">UserTypeName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{userType.userTypeName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.userType.userTypeCode">UserTypeCode</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{userType.userTypeCode}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="userType"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

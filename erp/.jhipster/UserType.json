@@ -1,0 +1,35 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "userTypeName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UserTypeName",
+            "fieldNameUnderscored": "user_type_name",
+            "fieldValidate": true,
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "userTypeCode",
+            "fieldType": "String",
+            "fieldNameCapitalized": "UserTypeCode",
+            "fieldNameUnderscored": "user_type_code",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731155755",
+    "pagination": "pagination",
+    "validation": true
+}

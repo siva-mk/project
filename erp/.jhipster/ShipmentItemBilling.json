@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "shipment",
+            "relationshipNameCapitalized": "Shipment",
+            "relationshipFieldName": "shipment",
+            "otherEntityName": "shipment",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Shipment",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "shipmentItem",
+            "relationshipNameCapitalized": "ShipmentItem",
+            "relationshipFieldName": "shipmentItem",
+            "otherEntityName": "shipmentItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "ShipmentItem",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "invoice",
+            "relationshipNameCapitalized": "Invoice",
+            "relationshipFieldName": "invoice",
+            "otherEntityName": "invoice",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Invoice",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "invoiceItem",
+            "relationshipNameCapitalized": "InvoiceItem",
+            "relationshipFieldName": "invoiceItem",
+            "otherEntityName": "invoiceItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InvoiceItem",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731171244",
+    "pagination": "pagination",
+    "validation": false
+}

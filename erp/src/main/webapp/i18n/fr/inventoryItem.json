@@ -12,23 +12,20 @@
             "detail": {
                 "title": "InventoryItem"
             },
-            "productId": "ProductId",
-            "inventoryItemTypeId": "InventoryItemTypeId",
-            "partyId": "PartyId",
-            "statusId": "StatusId",
             "dateTimeReceived": "DateTimeReceived",
             "expiryDate": "ExpiryDate",
-            "facilityId": "FacilityId",
-            "containerId": "ContainerId",
-            "LotId": "LotId",
-            "UOMId": "UOMId",
+            "facility_id": "Facility_id",
+            "container_id": "Container_id",
+            "lot_id": "Lot_id",
+            "UOM_id": "UOM_id",
             "comments": "Comments",
             "quantityOnHand": "QuantityOnHand",
             "availableToPromise": "AvailableToPromise",
             "serialNumber": "SerialNumber",
             "product": "product",
             "inventoryItemType": "inventoryItemType",
-            "party": "party"
+            "party": "party",
+            "status": "status"
         }
     }
 }

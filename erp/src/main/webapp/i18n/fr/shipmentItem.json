@@ -1,0 +1,22 @@
+{
+    "erpApp": {
+        "shipmentItem" : {
+            "home": {
+                "title": "ShipmentItems",
+                "createLabel": "Créer un nouveau ShipmentItem",
+                "createOrEditLabel": "Créer ou éditer un ShipmentItem"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ShipmentItem {{ id }} ?"
+            },
+            "detail": {
+                "title": "ShipmentItem"
+            },
+            "quantity": "Quantity",
+            "shipmentContentDesc": "ShipmentContentDesc",
+            "shipment": "shipment",
+            "product": "product"
+        }
+    }
+}
+

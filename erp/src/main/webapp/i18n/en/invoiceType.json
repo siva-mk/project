@@ -1,0 +1,18 @@
+{
+    "erpApp": {
+        "invoiceType" : {
+            "home": {
+                "title": "InvoiceTypes",
+                "createLabel": "Create a new InvoiceType",
+                "createOrEditLabel": "Create or edit a InvoiceType"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete InvoiceType {{ id }}?"
+            },
+            "detail": {
+                "title": "InvoiceType"
+            },
+            "description": "Description"
+        }
+    }
+}

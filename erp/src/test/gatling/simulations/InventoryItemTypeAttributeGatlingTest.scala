@@ -67,7 +67,7 @@ class InventoryItemTypeAttributeGatlingTest extends Simulation {
             .exec(http("Create new inventoryItemTypeAttribute")
             .put("/api/inventoryItemTypeAttributes")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "inventoryItemTypeId":"0", "attributeName":"SAMPLE_TEXT"}""")).asJSON
+            .body(StringBody("""{"id":null, "attributeName":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_inventoryItemTypeAttribute_url")))
             .pause(10)

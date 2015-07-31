@@ -12,9 +12,8 @@
             "detail": {
                 "title": "UserRights"
             },
-            "userRecId": "UserRecId",
-            "appFeatureRecId": "AppFeatureRecId",
-            "appFeatures": "appFeatures"
+            "user_id": "User_id",
+            "appFeature": "appFeature"
         }
     }
 }

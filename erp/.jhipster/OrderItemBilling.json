@@ -1,0 +1,75 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "order",
+            "relationshipNameCapitalized": "Order",
+            "relationshipFieldName": "order",
+            "otherEntityName": "orderHeader",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderHeader",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "orderItem",
+            "relationshipNameCapitalized": "OrderItem",
+            "relationshipFieldName": "orderItem",
+            "otherEntityName": "orderItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderItem",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "invoice",
+            "relationshipNameCapitalized": "Invoice",
+            "relationshipFieldName": "invoice",
+            "otherEntityName": "invoice",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Invoice",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "invoiceItem",
+            "relationshipNameCapitalized": "InvoiceItem",
+            "relationshipFieldName": "invoiceItem",
+            "otherEntityName": "invoiceItem",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InvoiceItem",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Quantity",
+            "fieldNameUnderscored": "quantity",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "amount",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "Amount",
+            "fieldNameUnderscored": "amount",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731171133",
+    "pagination": "pagination",
+    "validation": true
+}

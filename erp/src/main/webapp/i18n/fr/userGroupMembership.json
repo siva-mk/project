@@ -12,8 +12,8 @@
             "detail": {
                 "title": "UserGroupMembership"
             },
-            "userRecId": "UserRecId",
-            "userGroupRecId": "UserGroupRecId"
+            "user_id": "User_id",
+            "userGroup": "userGroup"
         }
     }
 }

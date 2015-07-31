@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span translate="erpApp.invoice.detail.title">Invoice</span> {{invoice.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.billingAccount_id">BillingAccount_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.billingAccount_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.invoiceDate">InvoiceDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.invoiceDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.invoiceMessage">InvoiceMessage</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.invoiceMessage}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.invoiceType">invoiceType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.invoiceType.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.party">party</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.party.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.status">status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.status.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoice.contactParty">contactParty</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoice.contactParty.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="invoice"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

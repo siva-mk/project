@@ -1,0 +1,28 @@
+{
+    "erpApp": {
+        "orderHeader" : {
+            "home": {
+                "title": "OrderHeaders",
+                "createLabel": "Créer un nouveau OrderHeader",
+                "createOrEditLabel": "Créer ou éditer un OrderHeader"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le OrderHeader {{ id }} ?"
+            },
+            "detail": {
+                "title": "OrderHeader"
+            },
+            "orderDate": "OrderDate",
+            "entryDate": "EntryDate",
+            "visit_id": "Visit_id",
+            "createdBy": "CreatedBy",
+            "syncStatus_id": "SyncStatus_id",
+            "billingAccount_id": "BillingAccount_id",
+            "originFacility_id": "OriginFacility_id",
+            "grandTotal": "GrandTotal",
+            "ordertype": "ordertype",
+            "status": "status"
+        }
+    }
+}
+

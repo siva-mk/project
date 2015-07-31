@@ -1,0 +1,139 @@
+<div>
+
+    <h2 translate="erpApp.shipmentItemBilling.home.title">ShipmentItemBilling</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveShipmentItemBillingModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.shipmentItemBilling.home.createLabel">Create a new ShipmentItemBilling</span>
+    </button>
+    <div class="modal fade" id="saveShipmentItemBillingModal" tabindex="-1" role="dialog" aria-labelledby="myShipmentItemBillingLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myShipmentItemBillingLabel" translate="erpApp.shipmentItemBilling.home.createOrEditLabel">Create or edit a ShipmentItemBilling</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="shipmentItemBilling.id" readonly>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label translate="erpApp.shipmentItemBilling.shipment">shipment</label>
+                            <select class="form-control" name="shipment" ng-model="shipmentItemBilling.shipment.id" ng-options="shipment.id as shipment.id for shipment in shipments">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipmentItemBilling.shipmentItem">shipmentItem</label>
+                            <select class="form-control" name="shipmentItem" ng-model="shipmentItemBilling.shipmentItem.id" ng-options="shipmentItem.id as shipmentItem.id for shipmentItem in shipmentitems">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipmentItemBilling.invoice">invoice</label>
+                            <select class="form-control" name="invoice" ng-model="shipmentItemBilling.invoice.id" ng-options="invoice.id as invoice.id for invoice in invoices">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.shipmentItemBilling.invoiceItem">invoiceItem</label>
+                            <select class="form-control" name="invoiceItem" ng-model="shipmentItemBilling.invoiceItem.id" ng-options="invoiceItem.id as invoiceItem.id for invoiceItem in invoiceitems">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteShipmentItemBillingConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(shipmentItemBilling.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.shipmentItemBilling.delete.question" translate-values="{id: '{{shipmentItemBilling.id}}'}">Are you sure you want to delete this ShipmentItemBilling?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.shipmentItemBilling.shipment">shipment</th>
+                    <th translate="erpApp.shipmentItemBilling.shipmentItem">shipmentItem</th>
+                    <th translate="erpApp.shipmentItemBilling.invoice">invoice</th>
+                    <th translate="erpApp.shipmentItemBilling.invoiceItem">invoiceItem</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="shipmentItemBilling in shipmentItemBillings">
+                    <td><a ui-sref="shipmentItemBillingDetail({id:shipmentItemBilling.id})">{{shipmentItemBilling.id}}</a></td>
+                    <td>{{shipmentItemBilling.shipment.id}}</td>
+                    <td>{{shipmentItemBilling.shipmentItem.id}}</td>
+                    <td>{{shipmentItemBilling.invoice.id}}</td>
+                    <td>{{shipmentItemBilling.invoiceItem.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="shipmentItemBillingDetail({id:shipmentItemBilling.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(shipmentItemBilling.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(shipmentItemBilling.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "invoiceType",
+            "relationshipNameCapitalized": "InvoiceType",
+            "relationshipFieldName": "invoiceType",
+            "otherEntityName": "invoiceType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InvoiceType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "party",
+            "relationshipNameCapitalized": "Party",
+            "relationshipFieldName": "party",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "contactParty",
+            "relationshipNameCapitalized": "ContactParty",
+            "relationshipFieldName": "contactParty",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "billingAccount_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "BillingAccount_id",
+            "fieldNameUnderscored": "billing_account_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "invoiceDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "InvoiceDate",
+            "fieldNameUnderscored": "invoice_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "invoiceMessage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "InvoiceMessage",
+            "fieldNameUnderscored": "invoice_message",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731170203",
+    "pagination": "pagination",
+    "validation": true
+}

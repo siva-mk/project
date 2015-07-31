@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="erpApp.orderItemAttribute.detail.title">OrderItemAttribute</span> {{orderItemAttribute.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemAttribute.attributeName">AttributeName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemAttribute.attributeName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemAttribute.attributeValue">AttributeValue</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemAttribute.attributeValue}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemAttribute.orderItemSeq_id">OrderItemSeq_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemAttribute.orderItemSeq_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItemAttribute.order">order</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItemAttribute.order.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="orderItemAttribute"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

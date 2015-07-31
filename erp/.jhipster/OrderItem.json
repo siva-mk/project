@@ -1,0 +1,169 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "order",
+            "relationshipNameCapitalized": "Order",
+            "relationshipFieldName": "order",
+            "otherEntityName": "orderHeader",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderHeader",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "product",
+            "relationshipNameCapitalized": "Product",
+            "relationshipFieldName": "product",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Product",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "budget_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Budget_id",
+            "fieldNameUnderscored": "budget_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "budgetItem_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "BudgetItem_id",
+            "fieldNameUnderscored": "budget_item_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "productFeadute_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "ProductFeadute_id",
+            "fieldNameUnderscored": "product_feadute_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "quote_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Quote_id",
+            "fieldNameUnderscored": "quote_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "quoteItem_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "QuoteItem_id",
+            "fieldNameUnderscored": "quote_item_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Quantity",
+            "fieldNameUnderscored": "quantity",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "unitPrice",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "UnitPrice",
+            "fieldNameUnderscored": "unit_price",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "unitListPrice",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "UnitListPrice",
+            "fieldNameUnderscored": "unit_list_price",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "unitAverageCost",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "UnitAverageCost",
+            "fieldNameUnderscored": "unit_average_cost",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "estimatedDeliveryDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "EstimatedDeliveryDate",
+            "fieldNameUnderscored": "estimated_delivery_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "itemDescription",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ItemDescription",
+            "fieldNameUnderscored": "item_description",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "correspondingPo_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "CorrespondingPo_id",
+            "fieldNameUnderscored": "corresponding_po_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731165545",
+    "pagination": "pagination",
+    "validation": true
+}

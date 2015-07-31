@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="erpApp.invoiceItem.detail.title">InvoiceItem</span> {{invoiceItem.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.invoiceItemSeq_id">InvoiceItemSeq_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.invoiceItemSeq_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.invoiceItemType_id">InvoiceItemType_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.invoiceItemType_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.productFeature_id">ProductFeature_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.productFeature_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.UOM_id">UOM_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.UOM_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.quantity">Quantity</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.quantity}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.amount">Amount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.amount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.invoice">invoice</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.invoice.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.inventoryItem">inventoryItem</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.inventoryItem.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.invoiceItem.product">product</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{invoiceItem.product.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="invoiceItem"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

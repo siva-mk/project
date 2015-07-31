@@ -1,0 +1,148 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "product",
+            "relationshipNameCapitalized": "Product",
+            "relationshipFieldName": "product",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Product",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "inventoryItemType",
+            "relationshipNameCapitalized": "InventoryItemType",
+            "relationshipFieldName": "inventoryItemType",
+            "otherEntityName": "inventoryItemType",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "InventoryItemType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "party",
+            "relationshipNameCapitalized": "Party",
+            "relationshipFieldName": "party",
+            "otherEntityName": "party",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Party",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "dateTimeReceived",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "DateTimeReceived",
+            "fieldNameUnderscored": "date_time_received",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "expiryDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "ExpiryDate",
+            "fieldNameUnderscored": "expiry_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "facility_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Facility_id",
+            "fieldNameUnderscored": "facility_id",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "container_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Container_id",
+            "fieldNameUnderscored": "container_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "lot_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Lot_id",
+            "fieldNameUnderscored": "lot_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "UOM_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "UOM_id",
+            "fieldNameUnderscored": "uom_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "comments",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Comments",
+            "fieldNameUnderscored": "comments",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "quantityOnHand",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "QuantityOnHand",
+            "fieldNameUnderscored": "quantity_on_hand",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "availableToPromise",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "AvailableToPromise",
+            "fieldNameUnderscored": "available_to_promise",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "serialNumber",
+            "fieldType": "String",
+            "fieldNameCapitalized": "SerialNumber",
+            "fieldNameUnderscored": "serial_number",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731162252",
+    "pagination": "pagination",
+    "validation": true
+}

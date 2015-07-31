@@ -1,0 +1,118 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "ordertype",
+            "relationshipNameCapitalized": "Ordertype",
+            "relationshipFieldName": "ordertype",
+            "otherEntityName": "ordertype",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Ordertype",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "orderDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "OrderDate",
+            "fieldNameUnderscored": "order_date",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "entryDate",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "EntryDate",
+            "fieldNameUnderscored": "entry_date",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "visit_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Visit_id",
+            "fieldNameUnderscored": "visit_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CreatedBy",
+            "fieldNameUnderscored": "created_by",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "syncStatus_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "SyncStatus_id",
+            "fieldNameUnderscored": "sync_status_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "billingAccount_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "BillingAccount_id",
+            "fieldNameUnderscored": "billing_account_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "originFacility_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "OriginFacility_id",
+            "fieldNameUnderscored": "origin_facility_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "grandTotal",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "GrandTotal",
+            "fieldNameUnderscored": "grand_total",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731163914",
+    "pagination": "pagination",
+    "validation": true
+}

@@ -67,7 +67,7 @@ class UserGroupMembershipGatlingTest extends Simulation {
             .exec(http("Create new userGroupMembership")
             .put("/api/userGroupMemberships")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "userRecId":"0", "userGroupRecId":"0"}""")).asJSON
+            .body(StringBody("""{"id":null, "user_id":"0"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_userGroupMembership_url")))
             .pause(10)

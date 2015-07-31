@@ -1,0 +1,19 @@
+{
+    "erpApp": {
+        "userType" : {
+            "home": {
+                "title": "UserTypes",
+                "createLabel": "Create a new UserType",
+                "createOrEditLabel": "Create or edit a UserType"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete UserType {{ id }}?"
+            },
+            "detail": {
+                "title": "UserType"
+            },
+            "userTypeName": "UserTypeName",
+            "userTypeCode": "UserTypeCode"
+        }
+    }
+}

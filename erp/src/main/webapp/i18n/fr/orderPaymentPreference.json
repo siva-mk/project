@@ -1,0 +1,24 @@
+{
+    "erpApp": {
+        "orderPaymentPreference" : {
+            "home": {
+                "title": "OrderPaymentPreferences",
+                "createLabel": "Créer un nouveau OrderPaymentPreference",
+                "createOrEditLabel": "Créer ou éditer un OrderPaymentPreference"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le OrderPaymentPreference {{ id }} ?"
+            },
+            "detail": {
+                "title": "OrderPaymentPreference"
+            },
+            "paymentMethod_id": "PaymentMethod_id",
+            "maxAmount": "MaxAmount",
+            "authCode": "AuthCode",
+            "authMessage": "AuthMessage",
+            "order": "order",
+            "status": "status"
+        }
+    }
+}
+

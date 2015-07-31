@@ -12,10 +12,9 @@
             "detail": {
                 "title": "InventoryItemStatus"
             },
-            "inventoryItemId": "InventoryItemId",
-            "statusId": "StatusId",
             "statusDateTime": "StatusDateTime",
-            "inventoryItem": "inventoryItem"
+            "inventoryItem": "inventoryItem",
+            "status": "status"
         }
     }
 }

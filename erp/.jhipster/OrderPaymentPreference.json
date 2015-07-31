@@ -1,0 +1,80 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "order",
+            "relationshipNameCapitalized": "Order",
+            "relationshipFieldName": "order",
+            "otherEntityName": "orderHeader",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderHeader",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "paymentMethod_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "PaymentMethod_id",
+            "fieldNameUnderscored": "payment_method_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "maxAmount",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "MaxAmount",
+            "fieldNameUnderscored": "max_amount",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "authCode",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AuthCode",
+            "fieldNameUnderscored": "auth_code",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "authMessage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AuthMessage",
+            "fieldNameUnderscored": "auth_message",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731165015",
+    "pagination": "pagination",
+    "validation": true
+}

@@ -67,7 +67,7 @@ class UserGroupRightsGatlingTest extends Simulation {
             .exec(http("Create new userGroupRights")
             .put("/api/userGroupRightss")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "userGroupRecId":"0"}""")).asJSON
+            .body(StringBody("""{"id":null}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_userGroupRights_url")))
             .pause(10)

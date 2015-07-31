@@ -1,0 +1,23 @@
+{
+    "erpApp": {
+        "orderItemBilling" : {
+            "home": {
+                "title": "OrderItemBillings",
+                "createLabel": "Create a new OrderItemBilling",
+                "createOrEditLabel": "Create or edit a OrderItemBilling"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete OrderItemBilling {{ id }}?"
+            },
+            "detail": {
+                "title": "OrderItemBilling"
+            },
+            "quantity": "Quantity",
+            "amount": "Amount",
+            "order": "order",
+            "orderItem": "orderItem",
+            "invoice": "invoice",
+            "invoiceItem": "invoiceItem"
+        }
+    }
+}

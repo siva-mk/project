@@ -1,0 +1,22 @@
+{
+    "erpApp": {
+        "shipmentItemBilling" : {
+            "home": {
+                "title": "ShipmentItemBillings",
+                "createLabel": "Créer un nouveau ShipmentItemBilling",
+                "createOrEditLabel": "Créer ou éditer un ShipmentItemBilling"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le ShipmentItemBilling {{ id }} ?"
+            },
+            "detail": {
+                "title": "ShipmentItemBilling"
+            },
+            "shipment": "shipment",
+            "shipmentItem": "shipmentItem",
+            "invoice": "invoice",
+            "invoiceItem": "invoiceItem"
+        }
+    }
+}
+

@@ -17,5 +17,29 @@
     <include file="classpath:config/liquibase/changelog/20150729183745_added_entity_Party.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150729184144_added_entity_ShipmentType.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20150729184606_added_entity_Shipment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731155755_added_entity_UserType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731155922_added_entity_ContactDetails.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731160613_added_entity_UserGroupMembership.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731161233_added_entity_UserRights.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731161337_added_entity_UserGroupRights.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731161745_added_entity_Status.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731162252_added_entity_InventoryItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731162425_added_entity_InventoryItemStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731162525_added_entity_InventoryItemTypeAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731162653_added_entity_InventoryItemAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731163304_added_entity_OrderTypeAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731163914_added_entity_OrderHeader.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731164035_added_entity_OrderAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731164701_added_entity_OrderStatus.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731165015_added_entity_OrderPaymentPreference.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731165545_added_entity_OrderItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731165818_added_entity_OrderItemAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731165945_added_entity_InvoiceType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731170203_added_entity_Invoice.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731170304_added_entity_InvoiceAttribute.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731170653_added_entity_InvoiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731170921_added_entity_ShipmentItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731171133_added_entity_OrderItemBilling.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150731171244_added_entity_ShipmentItemBilling.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

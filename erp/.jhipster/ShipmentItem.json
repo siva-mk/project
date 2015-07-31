@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "shipment",
+            "relationshipNameCapitalized": "Shipment",
+            "relationshipFieldName": "shipment",
+            "otherEntityName": "shipment",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Shipment",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "product",
+            "relationshipNameCapitalized": "Product",
+            "relationshipFieldName": "product",
+            "otherEntityName": "product",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Product",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Quantity",
+            "fieldNameUnderscored": "quantity",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "shipmentContentDesc",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ShipmentContentDesc",
+            "fieldNameUnderscored": "shipment_content_desc",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731170921",
+    "pagination": "pagination",
+    "validation": true
+}

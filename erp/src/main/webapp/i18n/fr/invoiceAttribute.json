@@ -1,0 +1,21 @@
+{
+    "erpApp": {
+        "invoiceAttribute" : {
+            "home": {
+                "title": "InvoiceAttributes",
+                "createLabel": "Créer un nouveau InvoiceAttribute",
+                "createOrEditLabel": "Créer ou éditer un InvoiceAttribute"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le InvoiceAttribute {{ id }} ?"
+            },
+            "detail": {
+                "title": "InvoiceAttribute"
+            },
+            "attributeName": "AttributeName",
+            "attributeValue": "AttributeValue",
+            "invoice": "invoice"
+        }
+    }
+}
+

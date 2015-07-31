@@ -1,0 +1,55 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "status",
+            "relationshipNameCapitalized": "Status",
+            "relationshipFieldName": "status",
+            "otherEntityName": "status",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "Status",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "order",
+            "relationshipNameCapitalized": "Order",
+            "relationshipFieldName": "order",
+            "otherEntityName": "orderHeader",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderHeader",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "orderItem_id",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "OrderItem_id",
+            "fieldNameUnderscored": "order_item_id",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "statusDateTime",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "StatusDateTime",
+            "fieldNameUnderscored": "status_date_time",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731164701",
+    "pagination": "pagination",
+    "validation": true
+}

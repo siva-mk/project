@@ -1,0 +1,48 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "orderHeader",
+            "relationshipNameCapitalized": "OrderHeader",
+            "relationshipFieldName": "orderHeader",
+            "otherEntityName": "orderHeader",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "OrderHeader",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "attributeName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AttributeName",
+            "fieldNameUnderscored": "attribute_name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "attributeValue",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AttributeValue",
+            "fieldNameUnderscored": "attribute_value",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731164035",
+    "pagination": "pagination",
+    "validation": true
+}

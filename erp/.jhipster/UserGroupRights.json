@@ -1,0 +1,25 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "userGroup",
+            "relationshipNameCapitalized": "UserGroup",
+            "relationshipFieldName": "userGroup",
+            "otherEntityName": "userGroups",
+            "relationshipType": "many-to-one",
+            "otherEntityNameCapitalized": "UserGroups",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150731161337",
+    "pagination": "pagination",
+    "validation": false
+}

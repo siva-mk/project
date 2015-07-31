@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="erpApp.contactDetails.detail.title">ContactDetails</span> {{contactDetails.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.contactDetails.user">User</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contactDetails.user}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.contactDetails.address1">Address1</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contactDetails.address1}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.contactDetails.address2">Address2</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contactDetails.address2}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.contactDetails.active">Active</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contactDetails.active}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="contactDetails"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

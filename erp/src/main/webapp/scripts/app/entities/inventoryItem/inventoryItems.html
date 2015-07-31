@@ -1,0 +1,259 @@
+<div>
+
+    <h2 translate="erpApp.inventoryItem.home.title">InventoryItem</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveInventoryItemModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.inventoryItem.home.createLabel">Create a new InventoryItem</span>
+    </button>
+    <div class="modal fade" id="saveInventoryItemModal" tabindex="-1" role="dialog" aria-labelledby="myInventoryItemLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myInventoryItemLabel" translate="erpApp.inventoryItem.home.createOrEditLabel">Create or edit a InventoryItem</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="inventoryItem.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.dateTimeReceived">DateTimeReceived</label>
+                            <input type="datetime-local" class="form-control" name="dateTimeReceived"
+                                   ng-model="inventoryItem.dateTimeReceived" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.dateTimeReceived.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.dateTimeReceived.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.dateTimeReceived.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.expiryDate">ExpiryDate</label>
+                            <input type="datetime-local" class="form-control" name="expiryDate"
+                                   ng-model="inventoryItem.expiryDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.facility_id">Facility_id</label>
+                            <input type="number" class="form-control" name="facility_id"
+                                   ng-model="inventoryItem.facility_id">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.container_id">Container_id</label>
+                            <input type="number" class="form-control" name="container_id"
+                                   ng-model="inventoryItem.container_id" required>
+
+                            <div ng-show="editForm.container_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.container_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.container_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.lot_id">Lot_id</label>
+                            <input type="number" class="form-control" name="lot_id"
+                                   ng-model="inventoryItem.lot_id" required>
+
+                            <div ng-show="editForm.lot_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.lot_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.lot_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.UOM_id">UOM_id</label>
+                            <input type="number" class="form-control" name="UOM_id"
+                                   ng-model="inventoryItem.UOM_id" required>
+
+                            <div ng-show="editForm.UOM_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.UOM_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.UOM_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.comments">Comments</label>
+                            <input type="text" class="form-control" name="comments"
+                                   ng-model="inventoryItem.comments">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.quantityOnHand">QuantityOnHand</label>
+                            <input type="number" class="form-control" name="quantityOnHand"
+                                   ng-model="inventoryItem.quantityOnHand">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.availableToPromise">AvailableToPromise</label>
+                            <input type="number" class="form-control" name="availableToPromise"
+                                   ng-model="inventoryItem.availableToPromise">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.serialNumber">SerialNumber</label>
+                            <input type="text" class="form-control" name="serialNumber"
+                                   ng-model="inventoryItem.serialNumber">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.product">product</label>
+                            <select class="form-control" name="product" ng-model="inventoryItem.product.id" ng-options="product.id as product.id for product in products">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.inventoryItemType">inventoryItemType</label>
+                            <select class="form-control" name="inventoryItemType" ng-model="inventoryItem.inventoryItemType.id" ng-options="inventoryItemType.id as inventoryItemType.id for inventoryItemType in inventoryitemtypes">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.party">party</label>
+                            <select class="form-control" name="party" ng-model="inventoryItem.party.id" ng-options="party.id as party.id for party in partys">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.inventoryItem.status">status</label>
+                            <select class="form-control" name="status" ng-model="inventoryItem.status.id" ng-options="status.id as status.id for status in statuss">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteInventoryItemConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(inventoryItem.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.inventoryItem.delete.question" translate-values="{id: '{{inventoryItem.id}}'}">Are you sure you want to delete this InventoryItem?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.inventoryItem.dateTimeReceived">DateTimeReceived</th>
+                    <th translate="erpApp.inventoryItem.expiryDate">ExpiryDate</th>
+                    <th translate="erpApp.inventoryItem.facility_id">Facility_id</th>
+                    <th translate="erpApp.inventoryItem.container_id">Container_id</th>
+                    <th translate="erpApp.inventoryItem.lot_id">Lot_id</th>
+                    <th translate="erpApp.inventoryItem.UOM_id">UOM_id</th>
+                    <th translate="erpApp.inventoryItem.comments">Comments</th>
+                    <th translate="erpApp.inventoryItem.quantityOnHand">QuantityOnHand</th>
+                    <th translate="erpApp.inventoryItem.availableToPromise">AvailableToPromise</th>
+                    <th translate="erpApp.inventoryItem.serialNumber">SerialNumber</th>
+                    <th translate="erpApp.inventoryItem.product">product</th>
+                    <th translate="erpApp.inventoryItem.inventoryItemType">inventoryItemType</th>
+                    <th translate="erpApp.inventoryItem.party">party</th>
+                    <th translate="erpApp.inventoryItem.status">status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="inventoryItem in inventoryItems">
+                    <td><a ui-sref="inventoryItemDetail({id:inventoryItem.id})">{{inventoryItem.id}}</a></td>
+                    <td>{{inventoryItem.dateTimeReceived}}</td>
+                    <td>{{inventoryItem.expiryDate}}</td>
+                    <td>{{inventoryItem.facility_id}}</td>
+                    <td>{{inventoryItem.container_id}}</td>
+                    <td>{{inventoryItem.lot_id}}</td>
+                    <td>{{inventoryItem.UOM_id}}</td>
+                    <td>{{inventoryItem.comments}}</td>
+                    <td>{{inventoryItem.quantityOnHand}}</td>
+                    <td>{{inventoryItem.availableToPromise}}</td>
+                    <td>{{inventoryItem.serialNumber}}</td>
+                    <td>{{inventoryItem.product.id}}</td>
+                    <td>{{inventoryItem.inventoryItemType.id}}</td>
+                    <td>{{inventoryItem.party.id}}</td>
+                    <td>{{inventoryItem.status.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="inventoryItemDetail({id:inventoryItem.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(inventoryItem.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(inventoryItem.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

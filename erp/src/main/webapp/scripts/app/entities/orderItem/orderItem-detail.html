@@ -1,0 +1,142 @@
+
+<div>
+    <h2><span translate="erpApp.orderItem.detail.title">OrderItem</span> {{orderItem.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.budget_id">Budget_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.budget_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.budgetItem_id">BudgetItem_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.budgetItem_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.productFeadute_id">ProductFeadute_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.productFeadute_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.quote_id">Quote_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.quote_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.quoteItem_id">QuoteItem_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.quoteItem_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.quantity">Quantity</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.quantity}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.unitPrice">UnitPrice</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.unitPrice}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.unitListPrice">UnitListPrice</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.unitListPrice}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.unitAverageCost">UnitAverageCost</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.unitAverageCost}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.estimatedDeliveryDate">EstimatedDeliveryDate</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.estimatedDeliveryDate}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.itemDescription">ItemDescription</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.itemDescription}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.correspondingPo_id">CorrespondingPo_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.correspondingPo_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.order">order</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.order.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.product">product</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.product.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="erpApp.orderItem.status">status</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{orderItem.status.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="orderItem"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

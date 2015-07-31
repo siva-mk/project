@@ -67,7 +67,7 @@ class InventoryItemStatusGatlingTest extends Simulation {
             .exec(http("Create new inventoryItemStatus")
             .put("/api/inventoryItemStatuss")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "inventoryItemId":"0", "statusId":"0", "statusDateTime":"2020-01-01T00:00:00.000Z"}""")).asJSON
+            .body(StringBody("""{"id":null, "statusDateTime":"2020-01-01T00:00:00.000Z"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_inventoryItemStatus_url")))
             .pause(10)

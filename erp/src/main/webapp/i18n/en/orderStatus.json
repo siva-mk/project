@@ -1,0 +1,21 @@
+{
+    "erpApp": {
+        "orderStatus" : {
+            "home": {
+                "title": "OrderStatuss",
+                "createLabel": "Create a new OrderStatus",
+                "createOrEditLabel": "Create or edit a OrderStatus"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete OrderStatus {{ id }}?"
+            },
+            "detail": {
+                "title": "OrderStatus"
+            },
+            "orderItem_id": "OrderItem_id",
+            "statusDateTime": "StatusDateTime",
+            "status": "status",
+            "order": "order"
+        }
+    }
+}

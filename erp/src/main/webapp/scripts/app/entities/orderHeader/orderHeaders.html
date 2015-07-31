@@ -1,0 +1,245 @@
+<div>
+
+    <h2 translate="erpApp.orderHeader.home.title">OrderHeader</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveOrderHeaderModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="erpApp.orderHeader.home.createLabel">Create a new OrderHeader</span>
+    </button>
+    <div class="modal fade" id="saveOrderHeaderModal" tabindex="-1" role="dialog" aria-labelledby="myOrderHeaderLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myOrderHeaderLabel" translate="erpApp.orderHeader.home.createOrEditLabel">Create or edit a OrderHeader</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="orderHeader.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.orderDate">OrderDate</label>
+                            <input type="datetime-local" class="form-control" name="orderDate"
+                                   ng-model="orderHeader.orderDate" ng-model-options="{timezone: 'UTC'}" required>
+
+                            <div ng-show="editForm.orderDate.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.orderDate.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.orderDate.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                                    This field should be a date and time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.entryDate">EntryDate</label>
+                            <input type="datetime-local" class="form-control" name="entryDate"
+                                   ng-model="orderHeader.entryDate" ng-model-options="{timezone: 'UTC'}">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.visit_id">Visit_id</label>
+                            <input type="number" class="form-control" name="visit_id"
+                                   ng-model="orderHeader.visit_id" required>
+
+                            <div ng-show="editForm.visit_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.visit_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.visit_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.createdBy">CreatedBy</label>
+                            <input type="text" class="form-control" name="createdBy"
+                                   ng-model="orderHeader.createdBy" required>
+
+                            <div ng-show="editForm.createdBy.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.createdBy.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.syncStatus_id">SyncStatus_id</label>
+                            <input type="number" class="form-control" name="syncStatus_id"
+                                   ng-model="orderHeader.syncStatus_id" required>
+
+                            <div ng-show="editForm.syncStatus_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.syncStatus_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.syncStatus_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.billingAccount_id">BillingAccount_id</label>
+                            <input type="number" class="form-control" name="billingAccount_id"
+                                   ng-model="orderHeader.billingAccount_id" required>
+
+                            <div ng-show="editForm.billingAccount_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.billingAccount_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.billingAccount_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.originFacility_id">OriginFacility_id</label>
+                            <input type="number" class="form-control" name="originFacility_id"
+                                   ng-model="orderHeader.originFacility_id" required>
+
+                            <div ng-show="editForm.originFacility_id.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.originFacility_id.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                                <p class="help-block"
+                                   ng-show="editForm.originFacility_id.$error.number" translate="entity.validation.number">
+                                    This field should be a number.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.grandTotal">GrandTotal</label>
+                            <input type="number" class="form-control" name="grandTotal"
+                                   ng-model="orderHeader.grandTotal">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.ordertype">ordertype</label>
+                            <select class="form-control" name="ordertype" ng-model="orderHeader.ordertype.id" ng-options="ordertype.id as ordertype.id for ordertype in ordertypes">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label translate="erpApp.orderHeader.status">status</label>
+                            <select class="form-control" name="status" ng-model="orderHeader.status.id" ng-options="status.id as status.id for status in statuss">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteOrderHeaderConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(orderHeader.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="erpApp.orderHeader.delete.question" translate-values="{id: '{{orderHeader.id}}'}">Are you sure you want to delete this OrderHeader?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="erpApp.orderHeader.orderDate">OrderDate</th>
+                    <th translate="erpApp.orderHeader.entryDate">EntryDate</th>
+                    <th translate="erpApp.orderHeader.visit_id">Visit_id</th>
+                    <th translate="erpApp.orderHeader.createdBy">CreatedBy</th>
+                    <th translate="erpApp.orderHeader.syncStatus_id">SyncStatus_id</th>
+                    <th translate="erpApp.orderHeader.billingAccount_id">BillingAccount_id</th>
+                    <th translate="erpApp.orderHeader.originFacility_id">OriginFacility_id</th>
+                    <th translate="erpApp.orderHeader.grandTotal">GrandTotal</th>
+                    <th translate="erpApp.orderHeader.ordertype">ordertype</th>
+                    <th translate="erpApp.orderHeader.status">status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="orderHeader in orderHeaders">
+                    <td><a ui-sref="orderHeaderDetail({id:orderHeader.id})">{{orderHeader.id}}</a></td>
+                    <td>{{orderHeader.orderDate}}</td>
+                    <td>{{orderHeader.entryDate}}</td>
+                    <td>{{orderHeader.visit_id}}</td>
+                    <td>{{orderHeader.createdBy}}</td>
+                    <td>{{orderHeader.syncStatus_id}}</td>
+                    <td>{{orderHeader.billingAccount_id}}</td>
+                    <td>{{orderHeader.originFacility_id}}</td>
+                    <td>{{orderHeader.grandTotal}}</td>
+                    <td>{{orderHeader.ordertype.id}}</td>
+                    <td>{{orderHeader.status.id}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="orderHeaderDetail({id:orderHeader.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(orderHeader.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(orderHeader.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

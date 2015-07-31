@@ -12,7 +12,6 @@
             "detail": {
                 "title": "InventoryItemTypeAttribute"
             },
-            "inventoryItemTypeId": "InventoryItemTypeId",
             "attributeName": "AttributeName"
         }
     }

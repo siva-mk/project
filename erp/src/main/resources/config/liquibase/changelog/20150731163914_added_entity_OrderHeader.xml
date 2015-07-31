@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity OrderHeader.
+    -->
+    <changeSet id="20150731163914" author="jhipster">
+        <createTable tableName="T_ORDERHEADER">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_date" type="timestamp">
+                <constraints nullable="false" />
+            </column>
+            <column name="entry_date" type="timestamp"/>
+            <column name="visit_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="created_by" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="sync_status_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="billing_account_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="origin_facility_id" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="grand_total" type="bigint"/>
+            <column name="ordertype_id" type="bigint"/>
+            <column name="status_id" type="bigint"/>
+        </createTable>
+        <dropDefaultValue tableName="T_ORDERHEADER" columnName="order_date" columnDataType="datetime"/>
+
+        <dropDefaultValue tableName="T_ORDERHEADER" columnName="entry_date" columnDataType="datetime"/>
+
+        
+        <addForeignKeyConstraint baseColumnNames="ordertype_id"
+                                 baseTableName="T_ORDERHEADER"
+                                 constraintName="fk_orderheader_ordertype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_ORDERTYPE"/>
+
+        <addForeignKeyConstraint baseColumnNames="status_id"
+                                 baseTableName="T_ORDERHEADER"
+                                 constraintName="fk_orderheader_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="T_STATUS"/>
+
+    </changeSet>
+</databaseChangeLog>
