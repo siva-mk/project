@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "ERP",
+        "title": "Tree ERP",
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
@@ -134,5 +134,5 @@
             "datetimelocal": "This field should be a date and time."
         }
     },
-    "footer": "This is your footer"
+    "footer": "ThillaiTech"
 }
